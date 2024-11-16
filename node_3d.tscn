@@ -15,8 +15,8 @@
 [ext_resource type="Script" path="res://laptop_hit.gd" id="6_22x0x"]
 [ext_resource type="Texture2D" uid="uid://do8b3knaduioa" path="res://Images/door_closed.png.png" id="8_pgof8"]
 [ext_resource type="Script" path="res://game_logic_container.gd" id="10_fjovq"]
-[ext_resource type="Texture2D" uid="uid://cu5qqhqd8v04i" path="res://Images/Cat_Poster_Updated.png" id="10_h4uu5"]
 [ext_resource type="Script" path="res://drawer_hit.gd" id="11_vsg3n"]
+[ext_resource type="Texture2D" uid="uid://dnv126b4qn0r0" path="res://Images/Cat_Poster_2.png" id="16_odlif"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_akgym"]
 bg_color = Color(0.0666667, 0.0627451, 0.0666667, 0.643137)
@@ -980,9 +980,9 @@ texture = ExtResource("8_pgof8")
 
 [node name="Cat Poster" type="Sprite3D" parent="Game/WorldEnvironment/Cat Poster"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.804761, -1.65856, -1.62515)
-pixel_size = 0.0001
+pixel_size = 0.0002
 texture_filter = 0
-texture = ExtResource("10_h4uu5")
+texture = ExtResource("16_odlif")
 
 [node name="GameLogicContainer" type="Node" parent="Game"]
 script = ExtResource("10_fjovq")
