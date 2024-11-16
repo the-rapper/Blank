@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://vn45hbpedsc7"]
+[gd_scene load_steps=44 format=3 uid="uid://vn45hbpedsc7"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_1nw3k"]
 [ext_resource type="Texture2D" uid="uid://dj50dl1plwird" path="res://Images/desk_1.png" id="1_pp4dt"]
@@ -9,8 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://cj2uveebx7lyw" path="res://Models/plug.glb" id="4_rdwui"]
 [ext_resource type="Script" path="res://laptop_hit.gd" id="6_22x0x"]
 [ext_resource type="Texture2D" uid="uid://do8b3knaduioa" path="res://Images/door_closed.png.png" id="8_pgof8"]
-[ext_resource type="Texture2D" uid="uid://b0l4f7pv3xd4e" path="res://Images/Cat Poster.png" id="10_ah3vl"]
 [ext_resource type="Script" path="res://game_logic_container.gd" id="10_fjovq"]
+[ext_resource type="Texture2D" uid="uid://dc4yf5x7w3q0w" path="res://Images/Cat_Poster_Updated.png" id="10_h4uu5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_akgym"]
 bg_color = Color(0.0666667, 0.0627451, 0.0666667, 0.643137)
@@ -164,17 +164,6 @@ variation_opentype = {
 albedo_texture = ExtResource("2_pnv22")
 
 [sub_resource type="BoxMesh" id="BoxMesh_kmr7r"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_apgk0"]
-transparency = 1
-albedo_texture = ExtResource("1_pp4dt")
-metallic_specular = 0.43
-texture_repeat = false
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_fi84m"]
-uv2_padding = 2.32
-size = Vector2(0.5, 0.5)
-orientation = 2
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_v5m8l"]
 size = Vector3(0.193485, 0.172363, 0.131126)
@@ -878,8 +867,6 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.552
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Game/WorldEnvironment/Facing Player/Desk"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0410581, 0.31911)
-material_override = SubResource("StandardMaterial3D_apgk0")
-mesh = SubResource("PlaneMesh_fi84m")
 
 [node name="LeftDHit" type="Area3D" parent="Game/WorldEnvironment/Facing Player/Desk/MeshInstance3D"]
 
@@ -902,6 +889,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.273239, 0, 2.38419e-07)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14063, -0.0601349, -0.035923)
 shape = SubResource("BoxShape3D_v5m8l")
 
+[node name="Sprite3D" type="Sprite3D" parent="Game/WorldEnvironment/Facing Player/Desk"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00390625, -0.0425563, 0.320145)
+pixel_size = 0.0075
+shaded = true
+texture_filter = 0
+texture = ExtResource("1_pp4dt")
+
 [node name="plug" parent="Game/WorldEnvironment" instance=ExtResource("4_rdwui")]
 transform = Transform3D(-0.0229726, 0, -2.00833e-09, 0, 0.0229726, 0, 2.00833e-09, 0, -0.0229726, -1.05921, -1.88737, -1.62403)
 
@@ -921,7 +915,9 @@ texture = ExtResource("8_pgof8")
 
 [node name="Cat Poster" type="Sprite3D" parent="Game/WorldEnvironment/Cat Poster"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.804761, -1.65856, -1.62515)
-texture = ExtResource("10_ah3vl")
+pixel_size = 0.0001
+texture_filter = 0
+texture = ExtResource("10_h4uu5")
 
 [node name="GameLogicContainer" type="Node" parent="Game"]
 script = ExtResource("10_fjovq")
