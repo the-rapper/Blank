@@ -8,15 +8,13 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("interact"):
-		var result = cast_mouse_ray()
-		if result.has("collider") and Globals.can_interact:
-			var clicked = result.get("collider")
-			if(clicked.has_method("hit")): clicked.hit()
-			else: print("Object has hitbox but no defined behavior as of yet")
-			
-		
-	pass
+	if Globals.can_interact:
+		if Input.is_action_just_pressed("interact"):
+			var result = cast_mouse_ray()
+			if result.has("collider") and Globals.can_interact:
+				var clicked = result.get("collider")
+				if(clicked.has_method("hit")): clicked.hit()
+				else: print("Object has hitbox but no defined behavior as of yet")
 
 func cast_mouse_ray():
 	var mouse_pos = get_viewport().get_mouse_position()

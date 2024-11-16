@@ -4,6 +4,7 @@ extends Node3D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Globals.can_interact = true
+	Globals.time_flowing = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -13,7 +14,7 @@ func _process(delta: float) -> void:
 		look_down()
 		open_menu()
 	
-
+	
 var turn_deg = 0.0
 func turnaround() -> void:
 	if Input.is_action_just_pressed("look_left"):
@@ -29,7 +30,6 @@ func turnaround() -> void:
 @export var look_trigger_up = 0.55 # How far up the mouse needs to be to move the camera back up
 @export var down_tilt_deg = 10 # The degrees to tilt the cam down
 func look_down() -> void:
-	
 	var mouse_low = get_viewport().get_mouse_position().y / get_viewport().size.y  # number from 0-1 that describes how low the mouse is
 	if look_trigger_down <= mouse_low and (int(turn_deg) % 360 == 0):
 		var tween = get_tree().create_tween().set_parallel(false)
