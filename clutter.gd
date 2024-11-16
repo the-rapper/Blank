@@ -10,6 +10,7 @@ func _get_drag_data(at_position: Vector2) -> Variant:
 	var preview = self.duplicate()
 	self.hide()
 	preview.modulate.a =1 
+	self.mouse_filter = Control.MOUSE_FILTER_STOP
 	set_drag_preview(preview)
 	return self
 # Called every frame. 'delta' is the elapsed time since the previous frame.

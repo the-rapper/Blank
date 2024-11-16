@@ -17,7 +17,6 @@
 [ext_resource type="Script" path="res://game_logic_container.gd" id="10_fjovq"]
 [ext_resource type="Script" path="res://drawer_hit.gd" id="11_vsg3n"]
 [ext_resource type="Texture2D" uid="uid://dnv126b4qn0r0" path="res://Images/Cat_Poster_2.png" id="16_odlif"]
-[ext_resource type="Texture2D" uid="uid://djcox6byss1ds" path="res://Images/Cat_Poster_Updated.png" id="10_h4uu5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_akgym"]
 bg_color = Color(0.0666667, 0.0627451, 0.0666667, 0.643137)
