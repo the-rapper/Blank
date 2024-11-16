@@ -4,18 +4,14 @@ extends Node3D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Globals.can_interact = true
-	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	turnaround()
 	look_down()
-	open_menu()
-	pass
 	
 
-var turnList = []
 var turn_deg = 0.0
 func turnaround() -> void:
 	if Input.is_action_just_pressed("look_left"):
@@ -25,8 +21,6 @@ func turnaround() -> void:
 	else: return
 	var tween = get_tree().create_tween().set_parallel(false)
 	tween.tween_property(self, "rotation_degrees", Vector3(0,turn_deg,0), 0.1)
-	turnList.append(Vector3(0,turn_deg,0))
-	pass
 	
 	
 @export var look_trigger = 0.7 # How far down the mouse needs to be to turn the mouse down
@@ -40,9 +34,5 @@ func look_down() -> void:
 	elif rotation_degrees.x < 0:
 		var tween = get_tree().create_tween().set_parallel(false)
 		tween.tween_property(self, "rotation_degrees", Vector3(0,turn_deg,0), 0.1)
-
-
-# if exit pressed in gameplay, switch to menu scene
-func open_menu() -> void:
-	if Input.is_action_just_pressed("exit"):
-		get_tree().change_scene_to_file("res://Main menu/MainMenu.tscn")
+	
+	
