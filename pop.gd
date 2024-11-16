@@ -9,6 +9,9 @@ var chosen = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	hide()
+	for child in get_children():
+		child.hide()
 	pass # Replace with function body.
 
 
