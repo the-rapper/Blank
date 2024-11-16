@@ -920,7 +920,7 @@ texture = ExtResource("8_pgof8")
 [node name="Cat Poster" type="Node3D" parent="Game/WorldEnvironment"]
 
 [node name="Cat Poster" type="Sprite3D" parent="Game/WorldEnvironment/Cat Poster"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.804761, -1.55022, -1.5937)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.804761, -1.65856, -1.62515)
 texture = ExtResource("10_ah3vl")
 
 [node name="GameLogicContainer" type="Node" parent="Game"]
