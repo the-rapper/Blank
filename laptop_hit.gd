@@ -13,4 +13,3 @@ func _process(delta: float) -> void:
 func hit() -> void:
 	if(popups.chosen == null):
 		popups.pop_up("mooz")
-	

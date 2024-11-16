@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://vn45hbpedsc7"]
+[gd_scene load_steps=45 format=3 uid="uid://vn45hbpedsc7"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_1nw3k"]
 [ext_resource type="Texture2D" uid="uid://dj50dl1plwird" path="res://Images/desk_1.png" id="1_pp4dt"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cj2uveebx7lyw" path="res://Models/plug.glb" id="4_rdwui"]
 [ext_resource type="Script" path="res://laptop_hit.gd" id="6_22x0x"]
 [ext_resource type="Texture2D" uid="uid://do8b3knaduioa" path="res://Images/door_closed.png.png" id="8_pgof8"]
+[ext_resource type="Script" path="res://game_logic_container.gd" id="10_fjovq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_akgym"]
 bg_color = Color(0.0666667, 0.0627451, 0.0666667, 0.643137)
@@ -179,12 +180,6 @@ size = Vector3(0.193485, 0.172363, 0.131126)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ppeao"]
 size = Vector3(0.527893, 0.115936, 0.126556)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kxmiq"]
-albedo_texture = ExtResource("8_pgof8")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rxo5w"]
-albedo_texture = ExtResource("8_pgof8")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kelnh"]
 size = Vector3(2.42432, 3.25055, 1.70605)
@@ -906,14 +901,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.273239, 0, 2.38419e-07)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14063, -0.0601349, -0.035923)
 shape = SubResource("BoxShape3D_v5m8l")
 
-[node name="Door" type="Node3D" parent="Game/WorldEnvironment/Facing Player"]
-
-[node name="Sprite3D" type="Sprite3D" parent="Game/WorldEnvironment/Facing Player/Door"]
-transform = Transform3D(-0.151498, 0, 1.02208, 0, 1.88214, 0, -1.23297, 0, -0.125586, 1.19969, -1.5319, -1.04844)
-material_override = SubResource("StandardMaterial3D_kxmiq")
-material_overlay = SubResource("StandardMaterial3D_rxo5w")
-texture = ExtResource("8_pgof8")
-
 [node name="plug" parent="Game/WorldEnvironment" instance=ExtResource("4_rdwui")]
 transform = Transform3D(-0.0229726, 0, -2.00833e-09, 0, 0.0229726, 0, 2.00833e-09, 0, -0.0229726, -1.05921, -1.88737, -1.62403)
 
@@ -922,5 +909,14 @@ transform = Transform3D(-0.0229726, 0, -2.00833e-09, 0, 0.0229726, 0, 2.00833e-0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Game/WorldEnvironment/plug/Area3D"]
 transform = Transform3D(1, 0, -1.66267e-12, 0, 1, 0, 1.66267e-12, 0, 1, -0.122314, 0.589699, -0.353027)
 shape = SubResource("BoxShape3D_kelnh")
+
+[node name="Door" type="Node3D" parent="Game/WorldEnvironment"]
+
+[node name="Sprite3D" type="Sprite3D" parent="Game/WorldEnvironment/Door"]
+transform = Transform3D(-0.0299597, 0, 1.02947, 0, 1.88214, 0, -1.24188, 0, -0.0248359, 1.19969, -1.5319, -1.04844)
+texture = ExtResource("8_pgof8")
+
+[node name="GameLogicContainer" type="Node" parent="Game"]
+script = ExtResource("10_fjovq")
 
 [node name="Main Menu" type="CanvasLayer" parent="."]
