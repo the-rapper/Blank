@@ -267,6 +267,7 @@ bbcode_enabled = true
 text = "[color=#34AEE2]Joe[/color] to [color=#34AEE2]Everyone[/color]"
 
 [node name="Pfp" type="Panel" parent="Game/GUI/Popups/Mooz/RightBar/Chat/Messages/Control2"]
+layout_mode = 0
 offset_left = 11.0
 offset_top = 23.5
 offset_right = 32.0
@@ -315,6 +316,7 @@ bbcode_enabled = true
 text = "[color=#34AEE2]Joe[/color] to [color=#34AEE2]Everyone[/color]"
 
 [node name="Pfp" type="Panel" parent="Game/GUI/Popups/Mooz/RightBar/Chat/Messages/Control"]
+layout_mode = 0
 offset_left = 11.0
 offset_top = 23.5
 offset_right = 32.0
@@ -363,6 +365,7 @@ bbcode_enabled = true
 text = "[color=#34AEE2]Joe[/color] to [color=#34AEE2]Everyone[/color]"
 
 [node name="Pfp" type="Panel" parent="Game/GUI/Popups/Mooz/RightBar/Chat/Messages/Control3"]
+layout_mode = 0
 offset_left = 11.0
 offset_top = 23.5
 offset_right = 32.0
