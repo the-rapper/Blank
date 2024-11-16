@@ -30,7 +30,7 @@ func pop_up(option: String):
 	chosen = options.get(option)
 	chosen.show()
 	connection_bar.show()
-	Globals.can_interact = false
 	if(chosen.has_method("begin")):
+		Globals.can_interact = false
 		chosen.begin()
 	pass
