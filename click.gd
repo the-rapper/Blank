@@ -17,6 +17,7 @@ func _process(delta: float) -> void:
 			if result.has("collider") and Globals.can_interact:
 				var clicked = result.get("collider")
 				if(clicked.has_method("hit")): clicked.hit()
+				elif(clicked.has_method("rustle")): clicked.rustle()
 				else: print("Object has hitbox but no defined behavior as of yet")
 
 func cast_mouse_ray():

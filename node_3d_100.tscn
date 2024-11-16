@@ -1,29 +1,27 @@
-[gd_scene load_steps=64 format=3 uid="uid://vn45hbpedsc7"]
+[gd_scene load_steps=62 format=3 uid="uid://20i3eii7jcdj"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_1nw3k"]
-[ext_resource type="Texture2D" uid="uid://dj50dl1plwird" path="res://Images/desk_1.png" id="1_pp4dt"]
-[ext_resource type="Script" path="res://pop.gd" id="1_r8y5k"]
-[ext_resource type="Script" path="res://drawer_game.gd" id="2_hpp6t"]
-[ext_resource type="Script" path="res://mooz.gd" id="2_jw0qk"]
-[ext_resource type="Texture2D" uid="uid://dlw5t28ktlt7n" path="res://Textures/99f3b05e659e42acb1f79e24b8f86809.webp" id="2_pnv22"]
-[ext_resource type="Texture2D" uid="uid://bg5jnvdbjj57h" path="res://Images/Unmute.png" id="2_skm02"]
-[ext_resource type="Script" path="res://facing_player.gd" id="2_uyxfe"]
-[ext_resource type="Script" path="res://click.gd" id="2_vjx2r"]
-[ext_resource type="Texture2D" uid="uid://cjq6luovhblhy" path="res://icon.svg" id="3_3th7p"]
-[ext_resource type="Texture2D" uid="uid://dl6fdnv6uelfw" path="res://Images/On Video.png" id="3_c7n2k"]
-[ext_resource type="Script" path="res://clutter.gd" id="4_5h51p"]
-[ext_resource type="PackedScene" uid="uid://cj2uveebx7lyw" path="res://Models/plug.glb" id="4_rdwui"]
-[ext_resource type="Script" path="res://texture_button.gd" id="5_iopol"]
-[ext_resource type="Script" path="res://drawer_collect.gd" id="5_oj3cc"]
-[ext_resource type="Script" path="res://drop_zone.gd" id="6_02ucm"]
-[ext_resource type="Script" path="res://laptop_hit.gd" id="6_22x0x"]
-[ext_resource type="Texture2D" uid="uid://do8b3knaduioa" path="res://Images/door_closed.png.png" id="8_pgof8"]
-[ext_resource type="Script" path="res://game_logic_container.gd" id="10_fjovq"]
-[ext_resource type="Script" path="res://drawer_hit.gd" id="11_vsg3n"]
-[ext_resource type="Texture2D" uid="uid://hv26iii0evlv" path="res://Images/DadSS.png" id="16_gmx1j"]
-[ext_resource type="Texture2D" uid="uid://dnv126b4qn0r0" path="res://Images/Cat_Poster_2.png" id="16_odlif"]
-[ext_resource type="Script" path="res://dad.gd" id="19_ug2ht"]
-[ext_resource type="Script" path="res://rustle_dad.gd" id="22_fytvl"]
+[ext_resource type="Script" path="res://pop.gd" id="1_0hodx"]
+[ext_resource type="Texture2D" uid="uid://bg5jnvdbjj57h" path="res://Images/Unmute.png" id="2_l5gyf"]
+[ext_resource type="Texture2D" uid="uid://dl6fdnv6uelfw" path="res://Images/On Video.png" id="3_1d485"]
+[ext_resource type="Script" path="res://drawer_game.gd" id="4_pa34k"]
+[ext_resource type="Texture2D" uid="uid://cjq6luovhblhy" path="res://icon.svg" id="5_kykbr"]
+[ext_resource type="Script" path="res://clutter.gd" id="6_3axfd"]
+[ext_resource type="Script" path="res://drawer_collect.gd" id="7_efvjf"]
+[ext_resource type="Script" path="res://drop_zone.gd" id="8_70hm0"]
+[ext_resource type="Texture2D" uid="uid://dlw5t28ktlt7n" path="res://Textures/99f3b05e659e42acb1f79e24b8f86809.webp" id="9_8xi0a"]
+[ext_resource type="Script" path="res://player.gd" id="10_e72rt"]
+[ext_resource type="Script" path="res://click.gd" id="11_phiny"]
+[ext_resource type="Script" path="res://facing_player.gd" id="12_sy7jx"]
+[ext_resource type="Script" path="res://drawer_hit.gd" id="13_2j3pw"]
+[ext_resource type="Script" path="res://laptop_hit.gd" id="14_a8yph"]
+[ext_resource type="Texture2D" uid="uid://dj50dl1plwird" path="res://Images/desk_1.png" id="15_nal4b"]
+[ext_resource type="PackedScene" uid="uid://cj2uveebx7lyw" path="res://Models/plug.glb" id="16_v1j3g"]
+[ext_resource type="Texture2D" uid="uid://do8b3knaduioa" path="res://Images/door_closed.png.png" id="17_b0avc"]
+[ext_resource type="Texture2D" uid="uid://hv26iii0evlv" path="res://Images/DadSS.png" id="18_u0rwy"]
+[ext_resource type="Script" path="res://dad.gd" id="19_vpbp3"]
+[ext_resource type="Script" path="res://rustle_dad.gd" id="20_x3d78"]
+[ext_resource type="Texture2D" uid="uid://dnv126b4qn0r0" path="res://Images/Cat_Poster_2.png" id="20_ys1ag"]
+[ext_resource type="Script" path="res://game_logic_container.gd" id="21_ffmel"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_akgym"]
 bg_color = Color(0.0666667, 0.0627451, 0.0666667, 0.643137)
@@ -179,7 +177,7 @@ size = Vector2(42, 43)
 [sub_resource type="Environment" id="Environment_robs0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v8e26"]
-albedo_texture = ExtResource("2_pnv22")
+albedo_texture = ExtResource("9_8xi0a")
 
 [sub_resource type="BoxMesh" id="BoxMesh_kmr7r"]
 
@@ -247,7 +245,7 @@ _data = {
 "walk": SubResource("Animation_elhfs")
 }
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_vd0fi"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_mxtfr"]
 size = Vector3(0.30249, 0.446289, 0.142578)
 
 [node name="Root2" type="Node3D"]
@@ -270,9 +268,9 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_akgym")
-script = ExtResource("1_r8y5k")
+script = ExtResource("1_0hodx")
 
-[node name="Mooz" type="Panel" parent="Game/GUI/Popups" node_paths=PackedStringArray("popups")]
+[node name="Mooz" type="Panel" parent="Game/GUI/Popups"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -287,8 +285,6 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_prxdj")
-script = ExtResource("2_jw0qk")
-popups = NodePath("..")
 
 [node name="RightBar" type="Panel" parent="Game/GUI/Popups/Mooz"]
 clip_contents = true
@@ -750,14 +746,11 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -53.0
-offset_top = -8.5
-offset_right = 234.0
-offset_bottom = 335.5
+offset_left = -21.0
+offset_right = 21.0
+offset_bottom = 27.0
 grow_horizontal = 2
-scale = Vector2(0.15, 0.15)
-texture_normal = ExtResource("2_skm02")
-stretch_mode = 0
+texture_normal = ExtResource("2_l5gyf")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/Control/Mic"]
 layout_mode = 1
@@ -794,13 +787,12 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -43.0
-offset_top = -5.5
-offset_right = 819.0
-offset_bottom = 315.5
+offset_left = -21.0
+offset_right = 841.0
+offset_bottom = 321.0
 grow_horizontal = 2
-scale = Vector2(0.1, 0.1)
-texture_normal = ExtResource("3_c7n2k")
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("3_1d485")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/Control/Video"]
 layout_mode = 1
@@ -845,26 +837,6 @@ theme_override_fonts/normal_font = SubResource("SystemFont_2amwr")
 theme_override_font_sizes/normal_font_size = 10
 bbcode_enabled = true
 text = "[center]Leave"
-
-[node name="Minimize" type="Control" parent="Game/GUI/Popups/Mooz/Control"]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="TextureButton" type="TextureButton" parent="Game/GUI/Popups/Mooz/Control/Minimize"]
-layout_mode = 0
-offset_left = 716.0
-offset_top = -474.5
-offset_right = 756.0
-offset_bottom = -434.5
-script = ExtResource("5_iopol")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/Control/Minimize"]
-layout_mode = 0
-offset_left = 473.0
-offset_top = -383.5
-offset_right = 513.0
-offset_bottom = -343.5
 
 [node name="Connection" type="Control" parent="Game/GUI/Popups"]
 visible = false
@@ -928,9 +900,9 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_7e3fs")
-script = ExtResource("2_hpp6t")
-sprite_options = [ExtResource("3_3th7p")]
-clutter_script = ExtResource("4_5h51p")
+script = ExtResource("4_pa34k")
+sprite_options = [ExtResource("5_kykbr")]
+clutter_script = ExtResource("6_3axfd")
 popups = NodePath("..")
 goal = NodePath("Charger")
 
@@ -941,7 +913,7 @@ offset_bottom = 40.0
 texture = SubResource("PlaceholderTexture2D_riry4")
 
 [node name="Area2D" type="Area2D" parent="Game/GUI/Popups/Drawer/Charger" node_paths=PackedStringArray("drawer")]
-script = ExtResource("5_oj3cc")
+script = ExtResource("7_efvjf")
 drawer = NodePath("../..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Game/GUI/Popups/Drawer/Charger/Area2D"]
@@ -956,7 +928,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
-script = ExtResource("6_02ucm")
+script = ExtResource("8_70hm0")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Game"]
 environment = SubResource("Environment_robs0")
@@ -1000,14 +972,14 @@ transform = Transform3D(1, 0, 0, 0, 0.999918, 0.0127929, 0, -0.0127929, 0.999918
 
 [node name="Player" type="Node3D" parent="Game/WorldEnvironment"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75017, -1.67023, -1.20654)
-script = ExtResource("1_1nw3k")
+script = ExtResource("10_e72rt")
 
 [node name="Camera3D" type="Camera3D" parent="Game/WorldEnvironment/Player"]
 fov = 56.5
-script = ExtResource("2_vjx2r")
+script = ExtResource("11_phiny")
 
 [node name="Facing Player" type="Node" parent="Game/WorldEnvironment" node_paths=PackedStringArray("player")]
-script = ExtResource("2_uyxfe")
+script = ExtResource("12_sy7jx")
 player = NodePath("../Player")
 
 [node name="Desk" type="Node3D" parent="Game/WorldEnvironment/Facing Player"]
@@ -1017,7 +989,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.552
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0410581, 0.31911)
 
 [node name="LeftDHit" type="Area3D" parent="Game/WorldEnvironment/Facing Player/Desk/MeshInstance3D" node_paths=PackedStringArray("popups")]
-script = ExtResource("11_vsg3n")
+script = ExtResource("13_2j3pw")
 popups = NodePath("../../../../../GUI/Popups")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Game/WorldEnvironment/Facing Player/Desk/MeshInstance3D/LeftDHit"]
@@ -1025,7 +997,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14063, -0.0601349, -0.0359
 shape = SubResource("BoxShape3D_v5m8l")
 
 [node name="LaptopHit" type="Area3D" parent="Game/WorldEnvironment/Facing Player/Desk/MeshInstance3D" node_paths=PackedStringArray("popups")]
-script = ExtResource("6_22x0x")
+script = ExtResource("14_a8yph")
 popups = NodePath("../../../../../GUI/Popups")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Game/WorldEnvironment/Facing Player/Desk/MeshInstance3D/LaptopHit"]
@@ -1034,7 +1006,7 @@ shape = SubResource("BoxShape3D_ppeao")
 
 [node name="RightDHit" type="Area3D" parent="Game/WorldEnvironment/Facing Player/Desk/MeshInstance3D" node_paths=PackedStringArray("popups")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.273239, 0, 2.38419e-07)
-script = ExtResource("11_vsg3n")
+script = ExtResource("13_2j3pw")
 popups = NodePath("../../../../../GUI/Popups")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Game/WorldEnvironment/Facing Player/Desk/MeshInstance3D/RightDHit"]
@@ -1046,9 +1018,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00390625, -0.0425563, 0.32
 pixel_size = 0.0075
 shaded = true
 texture_filter = 0
-texture = ExtResource("1_pp4dt")
+texture = ExtResource("15_nal4b")
 
-[node name="plug" parent="Game/WorldEnvironment" instance=ExtResource("4_rdwui")]
+[node name="plug" parent="Game/WorldEnvironment" instance=ExtResource("16_v1j3g")]
 transform = Transform3D(-0.0229726, 0, -2.00833e-09, 0, 0.0229726, 0, 2.00833e-09, 0, -0.0229726, -1.05921, -1.88737, -1.62403)
 
 [node name="Area3D" type="Area3D" parent="Game/WorldEnvironment/plug"]
@@ -1062,15 +1034,15 @@ shape = SubResource("BoxShape3D_kelnh")
 [node name="Sprite3D" type="Sprite3D" parent="Game/WorldEnvironment/Door"]
 transform = Transform3D(-0.0299597, 0, 1.02947, 0, 1.88214, 0, -1.24188, 0, -0.0248359, 1.19969, -1.5319, -1.04844)
 texture_filter = 2
-texture = ExtResource("8_pgof8")
+texture = ExtResource("17_b0avc")
 
 [node name="Dad" type="Sprite3D" parent="Game/WorldEnvironment/Door" node_paths=PackedStringArray("player")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.48997, -1.68372, -1.05002)
 offset = Vector2(0, -6)
 texture_filter = 2
-texture = ExtResource("16_gmx1j")
+texture = ExtResource("18_u0rwy")
 vframes = 2
-script = ExtResource("19_ug2ht")
+script = ExtResource("19_vpbp3")
 player = NodePath("../../Player")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Game/WorldEnvironment/Door/Dad"]
@@ -1079,11 +1051,11 @@ libraries = {
 }
 
 [node name="Area3D" type="Area3D" parent="Game/WorldEnvironment/Door/Dad"]
-script = ExtResource("22_fytvl")
+script = ExtResource("20_x3d78")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Game/WorldEnvironment/Door/Dad/Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0250244, -0.0639648, 0.00488281)
-shape = SubResource("BoxShape3D_vd0fi")
+shape = SubResource("BoxShape3D_mxtfr")
 
 [node name="Cat Poster" type="Node3D" parent="Game/WorldEnvironment"]
 
@@ -1091,9 +1063,9 @@ shape = SubResource("BoxShape3D_vd0fi")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.753146, -1.65856, -1.62515)
 pixel_size = 0.0002
 texture_filter = 0
-texture = ExtResource("16_odlif")
+texture = ExtResource("20_ys1ag")
 
 [node name="GameLogicContainer" type="Node" parent="Game"]
-script = ExtResource("10_fjovq")
+script = ExtResource("21_ffmel")
 
 [node name="Main Menu" type="CanvasLayer" parent="."]
