@@ -31,6 +31,7 @@ func create_clutter():
 		clutter.position = point
 		clutter.texture = state[point]
 		clutter.set_script(clutter_script)
+		clutter.mouse_filter = Control.MOUSE_FILTER_STOP
 		created.append(clutter)
 		add_child(clutter)
 func setup(): 

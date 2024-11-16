@@ -188,7 +188,7 @@ size = Vector3(0.527893, 0.115936, 0.126556)
 [sub_resource type="BoxShape3D" id="BoxShape3D_kelnh"]
 size = Vector3(2.42432, 3.25055, 1.70605)
 
-[node name="Root" type="Node3D"]
+[node name="Root2" type="Node3D"]
 
 [node name="Game" type="Node" parent="."]
 
