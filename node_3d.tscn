@@ -17,6 +17,7 @@
 [ext_resource type="Script" path="res://game_logic_container.gd" id="10_fjovq"]
 [ext_resource type="Script" path="res://drawer_hit.gd" id="11_vsg3n"]
 [ext_resource type="Texture2D" uid="uid://dnv126b4qn0r0" path="res://Images/Cat_Poster_2.png" id="16_odlif"]
+[ext_resource type="Texture2D" uid="uid://djcox6byss1ds" path="res://Images/Cat_Poster_Updated.png" id="10_h4uu5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_akgym"]
 bg_color = Color(0.0666667, 0.0627451, 0.0666667, 0.643137)
@@ -188,7 +189,7 @@ size = Vector3(0.527893, 0.115936, 0.126556)
 [sub_resource type="BoxShape3D" id="BoxShape3D_kelnh"]
 size = Vector3(2.42432, 3.25055, 1.70605)
 
-[node name="Node3D" type="Node3D"]
+[node name="Root" type="Node3D"]
 
 [node name="Game" type="Node" parent="."]
 

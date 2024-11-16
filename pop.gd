@@ -18,12 +18,14 @@ func _process(delta: float) -> void:
 		exit()
 	pass
 func exit():
+	Globals.is_participating = false
 	hide()
 	connection_bar.hide()
 	chosen.hide()
 	chosen = null
 	Globals.can_interact = true
 func pop_up(option: String):
+	Globals.is_participating = true
 	show()
 	chosen = options.get(option)
 	chosen.show()
