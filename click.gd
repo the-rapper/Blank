@@ -11,7 +11,8 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("interact"):
 		var result = cast_mouse_ray()
 		if result.has("collider") and Globals.can_interact:
-			result.get("collider").hit()
+			var clicked = result.get("collider")
+			if(clicked.has_method("hit")): clicked.hit()
 			
 		
 	pass
