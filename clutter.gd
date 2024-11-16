@@ -6,7 +6,7 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 func _get_drag_data(at_position: Vector2) -> Variant:
-	print("dragged")
+	# print("dragged")
 	var preview = self.duplicate()
 	self.hide()
 	preview.modulate.a =1 
