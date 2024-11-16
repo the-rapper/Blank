@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://vn45hbpedsc7"]
+[gd_scene load_steps=46 format=3 uid="uid://vn45hbpedsc7"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_1nw3k"]
 [ext_resource type="Texture2D" uid="uid://dj50dl1plwird" path="res://Images/desk_1.png" id="1_pp4dt"]
@@ -179,6 +179,12 @@ size = Vector3(0.193485, 0.172363, 0.131126)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ppeao"]
 size = Vector3(0.527893, 0.115936, 0.126556)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kxmiq"]
+albedo_texture = ExtResource("8_pgof8")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rxo5w"]
+albedo_texture = ExtResource("8_pgof8")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kelnh"]
 size = Vector3(2.42432, 3.25055, 1.70605)
@@ -904,6 +910,8 @@ shape = SubResource("BoxShape3D_v5m8l")
 
 [node name="Sprite3D" type="Sprite3D" parent="Game/WorldEnvironment/Facing Player/Door"]
 transform = Transform3D(-0.151498, 0, 1.02208, 0, 1.88214, 0, -1.23297, 0, -0.125586, 1.19969, -1.5319, -1.04844)
+material_override = SubResource("StandardMaterial3D_kxmiq")
+material_overlay = SubResource("StandardMaterial3D_rxo5w")
 texture = ExtResource("8_pgof8")
 
 [node name="plug" parent="Game/WorldEnvironment" instance=ExtResource("4_rdwui")]
