@@ -17,18 +17,17 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if chosen != null and (Input.is_action_just_pressed("exit") or Input.is_action_just_pressed("look_left") or Input.is_action_just_pressed("look_right")) :
-		exit()
+	# if chosen != null and (Input.is_action_just_pressed("exit") or Input.is_action_just_pressed("look_left") or Input.is_action_just_pressed("look_right")) :
+	# 	exit()
 	pass
 func exit():
-	Globals.is_participating = false
 	hide()
 	connection_bar.hide()
-	chosen.hide()
+	if chosen != null:
+		chosen.hide()
 	chosen = null
 	Globals.can_interact = true
 func pop_up(option: String):
-	Globals.is_participating = true
 	show()
 	chosen = options.get(option)
 	chosen.show()

@@ -5,11 +5,14 @@ extends Camera3D
 func _ready() -> void:
 	pass # Replace with function body.
 
-
+var pressed = false
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Globals.can_interact:
 		if Input.is_action_just_pressed("interact"):
+			pressed = true
+		if Input.is_action_just_released("interact") and pressed:
+			pressed = false
 			var result = cast_mouse_ray()
 			if result.has("collider") and Globals.can_interact:
 				var clicked = result.get("collider")

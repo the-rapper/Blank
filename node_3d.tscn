@@ -212,7 +212,7 @@ mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_akgym")
 script = ExtResource("1_r8y5k")
 
-[node name="Mooz" type="Panel" parent="Game/GUI/Popups"]
+[node name="Mooz" type="Panel" parent="Game/GUI/Popups" node_paths=PackedStringArray("popups")]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -228,6 +228,7 @@ grow_vertical = 2
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_prxdj")
 script = ExtResource("2_jw0qk")
+popups = NodePath("..")
 
 [node name="RightBar" type="Panel" parent="Game/GUI/Popups/Mooz"]
 clip_contents = true
