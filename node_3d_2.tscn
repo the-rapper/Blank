@@ -1,22 +1,21 @@
-[gd_scene load_steps=53 format=3 uid="uid://vn45hbpedsc7"]
+[gd_scene load_steps=53 format=3 uid="uid://dx6utq6e6em02"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_1nw3k"]
-[ext_resource type="Texture2D" uid="uid://dj50dl1plwird" path="res://Images/desk_1.png" id="1_pp4dt"]
-[ext_resource type="Script" path="res://pop.gd" id="1_r8y5k"]
-[ext_resource type="Script" path="res://drawer_game.gd" id="2_hpp6t"]
-[ext_resource type="Texture2D" uid="uid://dlw5t28ktlt7n" path="res://Textures/99f3b05e659e42acb1f79e24b8f86809.webp" id="2_pnv22"]
-[ext_resource type="Script" path="res://facing_player.gd" id="2_uyxfe"]
-[ext_resource type="Script" path="res://click.gd" id="2_vjx2r"]
-[ext_resource type="Texture2D" uid="uid://cjq6luovhblhy" path="res://icon.svg" id="3_3th7p"]
-[ext_resource type="Script" path="res://clutter.gd" id="4_5h51p"]
-[ext_resource type="PackedScene" uid="uid://cj2uveebx7lyw" path="res://Models/plug.glb" id="4_rdwui"]
-[ext_resource type="Script" path="res://drawer_collect.gd" id="5_oj3cc"]
-[ext_resource type="Script" path="res://drop_zone.gd" id="6_02ucm"]
-[ext_resource type="Script" path="res://laptop_hit.gd" id="6_22x0x"]
-[ext_resource type="Texture2D" uid="uid://do8b3knaduioa" path="res://Images/door_closed.png.png" id="8_pgof8"]
-[ext_resource type="Script" path="res://game_logic_container.gd" id="10_fjovq"]
-[ext_resource type="Texture2D" uid="uid://cu5qqhqd8v04i" path="res://Images/Cat_Poster_Updated.png" id="10_h4uu5"]
-[ext_resource type="Script" path="res://drawer_hit.gd" id="11_vsg3n"]
+[ext_resource type="Script" path="res://pop.gd" id="1_crj8k"]
+[ext_resource type="Script" path="res://drawer_game.gd" id="2_e56a8"]
+[ext_resource type="Texture2D" uid="uid://dlw5t28ktlt7n" path="res://Textures/99f3b05e659e42acb1f79e24b8f86809.webp" id="2_g4mna"]
+[ext_resource type="Script" path="res://player.gd" id="3_54xcj"]
+[ext_resource type="Texture2D" uid="uid://cjq6luovhblhy" path="res://icon.svg" id="3_subiu"]
+[ext_resource type="Script" path="res://drop_zone.gd" id="4_e88x0"]
+[ext_resource type="Script" path="res://clutter.gd" id="4_n688y"]
+[ext_resource type="Script" path="res://click.gd" id="4_nrbj7"]
+[ext_resource type="Script" path="res://facing_player.gd" id="5_726cx"]
+[ext_resource type="Script" path="res://drawer_collect.gd" id="6_5dtj7"]
+[ext_resource type="Texture2D" uid="uid://dj50dl1plwird" path="res://Images/desk_1.png" id="6_eoboj"]
+[ext_resource type="Script" path="res://laptop_hit.gd" id="7_hdxy6"]
+[ext_resource type="PackedScene" uid="uid://cj2uveebx7lyw" path="res://Models/plug.glb" id="8_ionfw"]
+[ext_resource type="Texture2D" uid="uid://do8b3knaduioa" path="res://Images/door_closed.png.png" id="9_wes1k"]
+[ext_resource type="Script" path="res://game_logic_container.gd" id="10_bdp3d"]
+[ext_resource type="Script" path="res://drawer_hit.gd" id="12_q71qk"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_akgym"]
 bg_color = Color(0.0666667, 0.0627451, 0.0666667, 0.643137)
@@ -164,20 +163,28 @@ variation_opentype = {
 2003265652: 825
 }
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7e3fs"]
-bg_color = Color(0.0671954, 0.0716912, 0.0933782, 1)
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_libat"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_riry4"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_iu5op"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ofqn"]
 size = Vector2(42, 43)
 
 [sub_resource type="Environment" id="Environment_robs0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v8e26"]
-albedo_texture = ExtResource("2_pnv22")
+albedo_texture = ExtResource("2_g4mna")
 
 [sub_resource type="BoxMesh" id="BoxMesh_kmr7r"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_apgk0"]
+transparency = 1
+albedo_texture = ExtResource("6_eoboj")
+metallic_specular = 0.43
+texture_repeat = false
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_fi84m"]
+uv2_padding = 2.32
+size = Vector2(0.5, 0.5)
+orientation = 2
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_v5m8l"]
 size = Vector3(0.193485, 0.172363, 0.131126)
@@ -209,7 +216,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_akgym")
-script = ExtResource("1_r8y5k")
+script = ExtResource("1_crj8k")
 
 [node name="Mooz" type="Panel" parent="Game/GUI/Popups"]
 visible = false
@@ -840,10 +847,10 @@ offset_bottom = 267.5
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
-theme_override_styles/panel = SubResource("StyleBoxFlat_7e3fs")
-script = ExtResource("2_hpp6t")
-sprite_options = [ExtResource("3_3th7p")]
-clutter_script = ExtResource("4_5h51p")
+theme_override_styles/panel = SubResource("StyleBoxFlat_prxdj")
+script = ExtResource("2_e56a8")
+sprite_options = [ExtResource("3_subiu")]
+clutter_script = ExtResource("4_n688y")
 popups = NodePath("..")
 goal = NodePath("Charger")
 
@@ -851,15 +858,15 @@ goal = NodePath("Charger")
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-texture = SubResource("PlaceholderTexture2D_riry4")
+texture = SubResource("PlaceholderTexture2D_libat")
 
 [node name="Area2D" type="Area2D" parent="Game/GUI/Popups/Drawer/Charger" node_paths=PackedStringArray("drawer")]
-script = ExtResource("5_oj3cc")
+script = ExtResource("6_5dtj7")
 drawer = NodePath("../..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Game/GUI/Popups/Drawer/Charger/Area2D"]
 position = Vector2(21, 21)
-shape = SubResource("RectangleShape2D_iu5op")
+shape = SubResource("RectangleShape2D_1ofqn")
 
 [node name="DropZone" type="Control" parent="Game/GUI/Popups/Drawer"]
 layout_mode = 1
@@ -869,7 +876,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
-script = ExtResource("6_02ucm")
+script = ExtResource("4_e88x0")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Game"]
 environment = SubResource("Environment_robs0")
@@ -913,14 +920,14 @@ transform = Transform3D(1, 0, 0, 0, 0.999918, 0.0127929, 0, -0.0127929, 0.999918
 
 [node name="Player" type="Node3D" parent="Game/WorldEnvironment"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75017, -1.67023, -1.20654)
-script = ExtResource("1_1nw3k")
+script = ExtResource("3_54xcj")
 
 [node name="Camera3D" type="Camera3D" parent="Game/WorldEnvironment/Player"]
 fov = 56.5
-script = ExtResource("2_vjx2r")
+script = ExtResource("4_nrbj7")
 
 [node name="Facing Player" type="Node" parent="Game/WorldEnvironment" node_paths=PackedStringArray("player")]
-script = ExtResource("2_uyxfe")
+script = ExtResource("5_726cx")
 player = NodePath("../Player")
 
 [node name="Desk" type="Node3D" parent="Game/WorldEnvironment/Facing Player"]
@@ -928,9 +935,11 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.552
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Game/WorldEnvironment/Facing Player/Desk"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0410581, 0.31911)
+material_override = SubResource("StandardMaterial3D_apgk0")
+mesh = SubResource("PlaneMesh_fi84m")
 
 [node name="LeftDHit" type="Area3D" parent="Game/WorldEnvironment/Facing Player/Desk/MeshInstance3D" node_paths=PackedStringArray("popups")]
-script = ExtResource("11_vsg3n")
+script = ExtResource("12_q71qk")
 popups = NodePath("../../../../../GUI/Popups")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Game/WorldEnvironment/Facing Player/Desk/MeshInstance3D/LeftDHit"]
@@ -938,7 +947,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14063, -0.0601349, -0.0359
 shape = SubResource("BoxShape3D_v5m8l")
 
 [node name="LaptopHit" type="Area3D" parent="Game/WorldEnvironment/Facing Player/Desk/MeshInstance3D" node_paths=PackedStringArray("popups")]
-script = ExtResource("6_22x0x")
+script = ExtResource("7_hdxy6")
 popups = NodePath("../../../../../GUI/Popups")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Game/WorldEnvironment/Facing Player/Desk/MeshInstance3D/LaptopHit"]
@@ -947,21 +956,14 @@ shape = SubResource("BoxShape3D_ppeao")
 
 [node name="RightDHit" type="Area3D" parent="Game/WorldEnvironment/Facing Player/Desk/MeshInstance3D" node_paths=PackedStringArray("popups")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.273239, 0, 2.38419e-07)
-script = ExtResource("11_vsg3n")
-popups = NodePath("../../../../../GUI/Popups/Drawer")
+script = ExtResource("12_q71qk")
+popups = NodePath("../../../../../GUI/Popups")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Game/WorldEnvironment/Facing Player/Desk/MeshInstance3D/RightDHit"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14063, -0.0601349, -0.035923)
 shape = SubResource("BoxShape3D_v5m8l")
 
-[node name="Sprite3D" type="Sprite3D" parent="Game/WorldEnvironment/Facing Player/Desk"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00390625, -0.0425563, 0.320145)
-pixel_size = 0.0075
-shaded = true
-texture_filter = 0
-texture = ExtResource("1_pp4dt")
-
-[node name="plug" parent="Game/WorldEnvironment" instance=ExtResource("4_rdwui")]
+[node name="plug" parent="Game/WorldEnvironment" instance=ExtResource("8_ionfw")]
 transform = Transform3D(-0.0229726, 0, -2.00833e-09, 0, 0.0229726, 0, 2.00833e-09, 0, -0.0229726, -1.05921, -1.88737, -1.62403)
 
 [node name="Area3D" type="Area3D" parent="Game/WorldEnvironment/plug"]
@@ -974,17 +976,9 @@ shape = SubResource("BoxShape3D_kelnh")
 
 [node name="Sprite3D" type="Sprite3D" parent="Game/WorldEnvironment/Door"]
 transform = Transform3D(-0.0299597, 0, 1.02947, 0, 1.88214, 0, -1.24188, 0, -0.0248359, 1.19969, -1.5319, -1.04844)
-texture = ExtResource("8_pgof8")
-
-[node name="Cat Poster" type="Node3D" parent="Game/WorldEnvironment"]
-
-[node name="Cat Poster" type="Sprite3D" parent="Game/WorldEnvironment/Cat Poster"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.804761, -1.65856, -1.62515)
-pixel_size = 0.0001
-texture_filter = 0
-texture = ExtResource("10_h4uu5")
+texture = ExtResource("9_wes1k")
 
 [node name="GameLogicContainer" type="Node" parent="Game"]
-script = ExtResource("10_fjovq")
+script = ExtResource("10_bdp3d")
 
 [node name="Main Menu" type="CanvasLayer" parent="."]

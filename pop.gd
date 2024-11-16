@@ -3,6 +3,7 @@ extends Panel
 @onready var connection_bar = get_node("Connection")
 @onready var options = {
 	"mooz": get_node("Mooz"),
+	"drawer": get_node("Drawer")
 	}
 var chosen = null
 
@@ -19,7 +20,7 @@ func _process(delta: float) -> void:
 func exit():
 	hide()
 	connection_bar.hide()
-	chosen.show()
+	chosen.hide()
 	chosen = null
 	Globals.can_interact = true
 func pop_up(option: String):
@@ -28,4 +29,6 @@ func pop_up(option: String):
 	chosen.show()
 	connection_bar.show()
 	Globals.can_interact = false
+	if(chosen.has_method("begin")):
+		chosen.begin()
 	pass
