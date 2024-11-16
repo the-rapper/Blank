@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://vn45hbpedsc7"]
+[gd_scene load_steps=58 format=3 uid="uid://vn45hbpedsc7"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_1nw3k"]
 [ext_resource type="Texture2D" uid="uid://dj50dl1plwird" path="res://Images/desk_1.png" id="1_pp4dt"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://dl6fdnv6uelfw" path="res://Images/On Video.png" id="3_c7n2k"]
 [ext_resource type="Script" path="res://clutter.gd" id="4_5h51p"]
 [ext_resource type="PackedScene" uid="uid://cj2uveebx7lyw" path="res://Models/plug.glb" id="4_rdwui"]
+[ext_resource type="Script" path="res://texture_button.gd" id="5_iopol"]
 [ext_resource type="Script" path="res://drawer_collect.gd" id="5_oj3cc"]
 [ext_resource type="Script" path="res://drop_zone.gd" id="6_02ucm"]
 [ext_resource type="Script" path="res://laptop_hit.gd" id="6_22x0x"]
@@ -793,13 +794,18 @@ offset_bottom = 40.0
 
 [node name="TextureButton" type="TextureButton" parent="Game/GUI/Popups/Mooz/Control/Minimize"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 716.0
+offset_top = -474.5
+offset_right = 756.0
+offset_bottom = -434.5
+script = ExtResource("5_iopol")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/Control/Minimize"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 473.0
+offset_top = -383.5
+offset_right = 513.0
+offset_bottom = -343.5
 
 [node name="Connection" type="Control" parent="Game/GUI/Popups"]
 visible = false
