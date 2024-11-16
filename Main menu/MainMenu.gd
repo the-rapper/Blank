@@ -56,7 +56,7 @@ func _on_button_normal(button: Button):
 
 func _on_start_pressed():
 	print("Start button pressed!")
-	transition_to_scene("res://node_3d.tscn")
+	transition_to_scene("res://MainRoom.tscn")
 
 func _on_settings_pressed():
 	print("Settings pressed!")

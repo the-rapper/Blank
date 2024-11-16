@@ -1,10 +1,11 @@
-[gd_scene load_steps=57 format=3 uid="uid://vn45hbpedsc7"]
+[gd_scene load_steps=58 format=3 uid="uid://vn45hbpedsc7"]
 
 [ext_resource type="Script" path="res://pop.gd" id="1_2o84w"]
 [ext_resource type="Script" path="res://mooz.gd" id="2_auvs0"]
 [ext_resource type="Texture2D" uid="uid://bg5jnvdbjj57h" path="res://Images/Unmute.png" id="3_74ipc"]
 [ext_resource type="Texture2D" uid="uid://dl6fdnv6uelfw" path="res://Images/On Video.png" id="4_xwt4s"]
 [ext_resource type="Script" path="res://drawer_game.gd" id="5_ib0sg"]
+[ext_resource type="Script" path="res://call_time.gd" id="5_nl5wc"]
 [ext_resource type="Texture2D" uid="uid://cjq6luovhblhy" path="res://icon.svg" id="6_1egyw"]
 [ext_resource type="Script" path="res://clutter.gd" id="7_lfjdn"]
 [ext_resource type="Script" path="res://drawer_collect.gd" id="8_yl1n6"]
@@ -786,6 +787,23 @@ theme_override_fonts/normal_font = SubResource("SystemFont_2amwr")
 theme_override_font_sizes/normal_font_size = 10
 bbcode_enabled = true
 text = "[center]Leave"
+
+[node name="Call Time" type="Label" parent="Game/GUI/Popups/Mooz/Bottom Bar Controls"]
+layout_mode = 0
+offset_left = 239.0
+offset_top = -9.5
+offset_right = 324.0
+offset_bottom = 13.5
+scale = Vector2(2.5, 2.5)
+text = "CALL TIME:"
+script = ExtResource("5_nl5wc")
+
+[node name="Label" type="Label" parent="Game/GUI/Popups/Mooz/Bottom Bar Controls/Call Time"]
+layout_mode = 0
+offset_left = 93.2
+offset_top = -1.2
+offset_right = 133.2
+offset_bottom = 21.8
 
 [node name="Connection" type="Control" parent="Game/GUI/Popups"]
 visible = false
