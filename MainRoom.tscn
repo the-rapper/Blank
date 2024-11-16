@@ -664,7 +664,7 @@ texture = SubResource("PlaceholderTexture2D_wro7u")
 layout_mode = 2
 texture = SubResource("PlaceholderTexture2D_wro7u")
 
-[node name="Control" type="Control" parent="Game/GUI/Popups/Mooz"]
+[node name="Bottom Bar Controls" type="Control" parent="Game/GUI/Popups/Mooz"]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -674,7 +674,7 @@ offset_right = 789.0
 offset_bottom = 1.0
 grow_vertical = 0
 
-[node name="Mic" type="Control" parent="Game/GUI/Popups/Mooz/Control"]
+[node name="Mic" type="Control" parent="Game/GUI/Popups/Mooz/Bottom Bar Controls"]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -685,18 +685,20 @@ offset_right = 106.0
 offset_bottom = -11.0
 grow_vertical = 0
 
-[node name="TextureButton" type="TextureButton" parent="Game/GUI/Popups/Mooz/Control/Mic"]
+[node name="TextureButton" type="TextureButton" parent="Game/GUI/Popups/Mooz/Bottom Bar Controls/Mic"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -21.0
-offset_right = 21.0
-offset_bottom = 27.0
+offset_left = -18.0
+offset_top = -7.5
+offset_right = 269.0
+offset_bottom = 336.5
 grow_horizontal = 2
+scale = Vector2(0.1, 0.1)
 texture_normal = ExtResource("3_74ipc")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/Control/Mic"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/Bottom Bar Controls/Mic"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -715,7 +717,7 @@ theme_override_font_sizes/normal_font_size = 10
 bbcode_enabled = true
 text = "[center] Mute"
 
-[node name="Video" type="Control" parent="Game/GUI/Popups/Mooz/Control"]
+[node name="Video" type="Control" parent="Game/GUI/Popups/Mooz/Bottom Bar Controls"]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -726,19 +728,22 @@ offset_right = 180.0
 offset_bottom = -11.0
 grow_vertical = 0
 
-[node name="TextureButton" type="TextureButton" parent="Game/GUI/Popups/Mooz/Control/Video"]
+[node name="TextureButton" type="TextureButton" parent="Game/GUI/Popups/Mooz/Bottom Bar Controls/Video"]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -21.0
-offset_right = 841.0
-offset_bottom = 321.0
+anchors_preset = -1
+anchor_left = 0.224
+anchor_top = -0.884
+anchor_right = 0.398
+anchor_bottom = -0.884
+offset_left = -8.024
+offset_top = 35.324
+offset_right = 840.752
+offset_bottom = 356.324
 grow_horizontal = 2
-scale = Vector2(0.2, 0.2)
+scale = Vector2(0.05, 0.05)
 texture_normal = ExtResource("4_xwt4s")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/Control/Video"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/Bottom Bar Controls/Video"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -757,7 +762,7 @@ theme_override_font_sizes/normal_font_size = 10
 bbcode_enabled = true
 text = "[center] Stop Video"
 
-[node name="Leave" type="Panel" parent="Game/GUI/Popups/Mooz/Control"]
+[node name="Leave" type="Panel" parent="Game/GUI/Popups/Mooz/Bottom Bar Controls"]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -772,7 +777,7 @@ grow_horizontal = 0
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_8ww76")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/Control/Leave"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/Bottom Bar Controls/Leave"]
 layout_mode = 0
 offset_top = 2.0
 offset_right = 54.0
