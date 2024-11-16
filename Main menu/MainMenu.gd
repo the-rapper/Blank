@@ -1,4 +1,4 @@
-# MainMenu.gd
+	# MainMenu.gd
 extends Control
 
 # Nodes for different layers
@@ -6,5 +6,3 @@ extends Control
 @onready var title = $Title
 @onready var menu_container = $MenuContainer
 @onready var animation_player = $AnimationPlayer
-
-	

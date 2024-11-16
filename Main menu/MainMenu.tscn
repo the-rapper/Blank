@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://c70vaech1pvk4"]
+[gd_scene load_steps=13 format=3 uid="uid://c70vaech1pvk4"]
 
 [ext_resource type="FontFile" uid="uid://crgvfh325dcap" path="res://Fonts/Evil Empire/Evil Empire.otf" id="1_b8pcp"]
+[ext_resource type="Script" path="res://Main menu/start_button.gd" id="2_qp66y"]
 
 [sub_resource type="Gradient" id="Gradient_usa4i"]
 offsets = PackedFloat32Array(0.5, 0.883117, 0.972527)
@@ -249,6 +250,7 @@ theme_override_fonts/font = ExtResource("1_b8pcp")
 theme_override_font_sizes/font_size = 65
 theme_override_styles/hover = SubResource("StyleBoxFlat_7hqbv")
 text = "Start"
+script = ExtResource("2_qp66y")
 
 [node name="Continue" type="Button" parent="MarginContainer/MenuItems"]
 custom_minimum_size = Vector2(400, 80)
@@ -295,3 +297,5 @@ theme_override_fonts/font = ExtResource("1_b8pcp")
 theme_override_font_sizes/font_size = 100
 theme_override_styles/normal = SubResource("StyleBoxFlat_vj6yb")
 text = "UNSTABLE CONNECTION"
+
+[connection signal="pressed" from="MarginContainer/MenuItems/StartButton" to="MarginContainer/MenuItems/StartButton" method="_start"]
