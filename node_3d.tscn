@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://vn45hbpedsc7"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_kmr7r"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Floor" type="MeshInstance3D" parent="."]
+transform = Transform3D(7.13531, 0, 0, 0, 0.0630675, 0, 0, 0, 5.64831, 0.00530513, -1.70233, -0.103327)
+mesh = SubResource("BoxMesh_kmr7r")
+
+[node name="Wall Z-" type="MeshInstance3D" parent="."]
+transform = Transform3D(7.13531, 0, 0, 0, -2.75677e-09, -5.64831, 0, 0.0630675, -2.46895e-07, -0.0028944, 1.0603, -2.80405)
+mesh = SubResource("BoxMesh_kmr7r")
+
+[node name="Wall Z" type="MeshInstance3D" parent="."]
+transform = Transform3D(7.13531, 0, 0, 0, -2.75677e-09, -5.64831, 0, 0.0630675, -2.46895e-07, 0.00530513, 1.00239, 2.71068)
+mesh = SubResource("BoxMesh_kmr7r")
+
+[node name="Wall X" type="MeshInstance3D" parent="."]
+transform = Transform3D(-3.11894e-07, 0.0630675, -2.46895e-07, 0, -2.75677e-09, -5.64831, -7.13531, -2.75677e-09, 1.07921e-14, 3.43988, 1.00239, 0.339894)
+mesh = SubResource("BoxMesh_kmr7r")
+
+[node name="Wall X-" type="MeshInstance3D" parent="."]
+transform = Transform3D(-3.11894e-07, 0.0630675, -2.46895e-07, 0, -2.75677e-09, -5.64831, -7.13531, -2.75677e-09, 1.07921e-14, -3.4724, 1.00239, 0.339894)
+mesh = SubResource("BoxMesh_kmr7r")
+
+[node name="Ceiling" type="MeshInstance3D" parent="."]
+transform = Transform3D(7.13531, 0, 0, 0, 0.0630675, 0, 0, 0, 5.64831, 0.00530513, 1.53961, -0.103327)
+mesh = SubResource("BoxMesh_kmr7r")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0567541, 0.500076, -0.0188115)
