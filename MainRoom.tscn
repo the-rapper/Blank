@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://vn45hbpedsc7"]
+[gd_scene load_steps=60 format=3 uid="uid://b3w0u2fyyrpnc"]
 
 [ext_resource type="Script" path="res://pop.gd" id="1_2o84w"]
 [ext_resource type="Script" path="res://mooz.gd" id="2_auvs0"]
@@ -7,7 +7,9 @@
 [ext_resource type="Script" path="res://drawer_game.gd" id="5_ib0sg"]
 [ext_resource type="Script" path="res://call_time.gd" id="5_nl5wc"]
 [ext_resource type="Texture2D" uid="uid://cjq6luovhblhy" path="res://icon.svg" id="6_1egyw"]
+[ext_resource type="Texture2D" uid="uid://hve0bqb6w3l" path="res://Images/minimize button.png" id="6_f0ryp"]
 [ext_resource type="Script" path="res://clutter.gd" id="7_lfjdn"]
+[ext_resource type="Script" path="res://minimizeMooz.gd" id="7_wsr26"]
 [ext_resource type="Script" path="res://drawer_collect.gd" id="8_yl1n6"]
 [ext_resource type="Script" path="res://drop_zone.gd" id="9_xrk4x"]
 [ext_resource type="Texture2D" uid="uid://dlw5t28ktlt7n" path="res://Textures/99f3b05e659e42acb1f79e24b8f86809.webp" id="10_ugylm"]
@@ -804,6 +806,25 @@ offset_left = 93.2
 offset_top = -1.2
 offset_right = 133.2
 offset_bottom = 21.8
+
+[node name="Minimize" type="Control" parent="Game/GUI/Popups/Mooz/Bottom Bar Controls"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureButton" type="TextureButton" parent="Game/GUI/Popups/Mooz/Bottom Bar Controls/Minimize" node_paths=PackedStringArray("mooz")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 17.5
+anchor_top = -11.987
+anchor_right = 19.15
+anchor_bottom = -10.787
+offset_top = -0.019989
+offset_right = -6.10352e-05
+offset_bottom = -0.0199585
+texture_normal = ExtResource("6_f0ryp")
+script = ExtResource("7_wsr26")
+mooz = NodePath("../../..")
 
 [node name="Connection" type="Control" parent="Game/GUI/Popups"]
 visible = false
