@@ -8,9 +8,10 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	turnaround()
-	look_down()
-	open_menu()
+	if Globals.can_interact:
+		turnaround()
+		look_down()
+		open_menu()
 	
 
 var turn_deg = 0.0
