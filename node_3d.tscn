@@ -1,13 +1,15 @@
-[gd_scene load_steps=53 format=3 uid="uid://vn45hbpedsc7"]
+[gd_scene load_steps=54 format=3 uid="uid://vn45hbpedsc7"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_1nw3k"]
 [ext_resource type="Texture2D" uid="uid://dj50dl1plwird" path="res://Images/desk_1.png" id="1_pp4dt"]
 [ext_resource type="Script" path="res://pop.gd" id="1_r8y5k"]
 [ext_resource type="Script" path="res://drawer_game.gd" id="2_hpp6t"]
 [ext_resource type="Texture2D" uid="uid://dlw5t28ktlt7n" path="res://Textures/99f3b05e659e42acb1f79e24b8f86809.webp" id="2_pnv22"]
+[ext_resource type="Texture2D" uid="uid://bg5jnvdbjj57h" path="res://Images/Unmute.png" id="2_skm02"]
 [ext_resource type="Script" path="res://facing_player.gd" id="2_uyxfe"]
 [ext_resource type="Script" path="res://click.gd" id="2_vjx2r"]
 [ext_resource type="Texture2D" uid="uid://cjq6luovhblhy" path="res://icon.svg" id="3_3th7p"]
+[ext_resource type="Texture2D" uid="uid://dl6fdnv6uelfw" path="res://Images/On Video.png" id="3_c7n2k"]
 [ext_resource type="Script" path="res://clutter.gd" id="4_5h51p"]
 [ext_resource type="PackedScene" uid="uid://cj2uveebx7lyw" path="res://Models/plug.glb" id="4_rdwui"]
 [ext_resource type="Script" path="res://drawer_collect.gd" id="5_oj3cc"]
@@ -120,9 +122,6 @@ font_names = PackedStringArray("Segoe UI Variable Small")
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_wro7u"]
 size = Vector2(365, 200)
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_rhsr2"]
-size = Vector2(40, 25)
 
 [sub_resource type="SystemFont" id="SystemFont_3ta5h"]
 font_names = PackedStringArray("Segoe UI")
@@ -690,7 +689,7 @@ offset_left = -21.0
 offset_right = 21.0
 offset_bottom = 27.0
 grow_horizontal = 2
-texture_normal = SubResource("PlaceholderTexture2D_rhsr2")
+texture_normal = ExtResource("2_skm02")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/Control/Mic"]
 layout_mode = 1
@@ -728,10 +727,11 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -21.0
-offset_right = 21.0
-offset_bottom = 27.0
+offset_right = 841.0
+offset_bottom = 321.0
 grow_horizontal = 2
-texture_normal = SubResource("PlaceholderTexture2D_rhsr2")
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("3_c7n2k")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/Control/Video"]
 layout_mode = 1
