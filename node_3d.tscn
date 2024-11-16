@@ -195,7 +195,6 @@ size = Vector3(2.42432, 3.25055, 1.70605)
 [node name="GUI" type="CanvasLayer" parent="Game"]
 
 [node name="Popups" type="Panel" parent="Game/GUI"]
-visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -212,7 +211,6 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_akgym")
 script = ExtResource("1_r8y5k")
 
 [node name="Mooz" type="Panel" parent="Game/GUI/Popups"]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -261,11 +259,11 @@ offset_top = 19.0
 offset_right = 189.0
 offset_bottom = 211.0
 
-[node name="Control2" type="Control" parent="Game/GUI/Popups/Mooz/RightBar/Chat/Messages"]
+[node name="Message2" type="Control" parent="Game/GUI/Popups/Mooz/RightBar/Chat/Messages"]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/RightBar/Chat/Messages/Control2"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/RightBar/Chat/Messages/Message2"]
 layout_mode = 0
 offset_left = 38.0
 offset_top = 6.5
@@ -277,7 +275,7 @@ theme_override_font_sizes/normal_font_size = 10
 bbcode_enabled = true
 text = "[color=#34AEE2]Joe[/color] to [color=#34AEE2]Everyone[/color]"
 
-[node name="Pfp" type="Panel" parent="Game/GUI/Popups/Mooz/RightBar/Chat/Messages/Control2"]
+[node name="Pfp" type="Panel" parent="Game/GUI/Popups/Mooz/RightBar/Chat/Messages/Message2"]
 layout_mode = 0
 offset_left = 11.0
 offset_top = 23.5
@@ -285,7 +283,7 @@ offset_right = 32.0
 offset_bottom = 43.5
 theme_override_styles/panel = SubResource("StyleBoxFlat_dw3dh")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/RightBar/Chat/Messages/Control2/Pfp"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/RightBar/Chat/Messages/Message2/Pfp"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -302,7 +300,7 @@ theme_override_font_sizes/normal_font_size = 10
 bbcode_enabled = true
 text = "[center] J"
 
-[node name="Message" type="Panel" parent="Game/GUI/Popups/Mooz/RightBar/Chat/Messages/Control2"]
+[node name="Message" type="Panel" parent="Game/GUI/Popups/Mooz/RightBar/Chat/Messages/Message2"]
 layout_mode = 2
 offset_left = 37.0
 offset_top = 21.5
@@ -310,11 +308,11 @@ offset_right = 143.0
 offset_bottom = 56.5
 theme_override_styles/panel = SubResource("StyleBoxFlat_23n5j")
 
-[node name="Control" type="Control" parent="Game/GUI/Popups/Mooz/RightBar/Chat/Messages"]
+[node name="Message" type="Control" parent="Game/GUI/Popups/Mooz/RightBar/Chat/Messages"]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/RightBar/Chat/Messages/Control"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/RightBar/Chat/Messages/Message"]
 layout_mode = 0
 offset_left = 38.0
 offset_top = 6.5
@@ -326,7 +324,7 @@ theme_override_font_sizes/normal_font_size = 10
 bbcode_enabled = true
 text = "[color=#34AEE2]Joe[/color] to [color=#34AEE2]Everyone[/color]"
 
-[node name="Pfp" type="Panel" parent="Game/GUI/Popups/Mooz/RightBar/Chat/Messages/Control"]
+[node name="Pfp" type="Panel" parent="Game/GUI/Popups/Mooz/RightBar/Chat/Messages/Message"]
 layout_mode = 0
 offset_left = 11.0
 offset_top = 23.5
@@ -334,7 +332,7 @@ offset_right = 32.0
 offset_bottom = 43.5
 theme_override_styles/panel = SubResource("StyleBoxFlat_dw3dh")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/RightBar/Chat/Messages/Control/Pfp"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/RightBar/Chat/Messages/Message/Pfp"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -351,7 +349,7 @@ theme_override_font_sizes/normal_font_size = 10
 bbcode_enabled = true
 text = "[center] J"
 
-[node name="Message" type="Panel" parent="Game/GUI/Popups/Mooz/RightBar/Chat/Messages/Control"]
+[node name="Message" type="Panel" parent="Game/GUI/Popups/Mooz/RightBar/Chat/Messages/Message"]
 layout_mode = 2
 offset_left = 37.0
 offset_top = 21.5
@@ -359,11 +357,11 @@ offset_right = 143.0
 offset_bottom = 56.5
 theme_override_styles/panel = SubResource("StyleBoxFlat_23n5j")
 
-[node name="Control3" type="Control" parent="Game/GUI/Popups/Mooz/RightBar/Chat/Messages"]
+[node name="Message3" type="Control" parent="Game/GUI/Popups/Mooz/RightBar/Chat/Messages"]
 custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/RightBar/Chat/Messages/Control3"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/RightBar/Chat/Messages/Message3"]
 layout_mode = 0
 offset_left = 38.0
 offset_top = 6.5
@@ -375,7 +373,7 @@ theme_override_font_sizes/normal_font_size = 10
 bbcode_enabled = true
 text = "[color=#34AEE2]Joe[/color] to [color=#34AEE2]Everyone[/color]"
 
-[node name="Pfp" type="Panel" parent="Game/GUI/Popups/Mooz/RightBar/Chat/Messages/Control3"]
+[node name="Pfp" type="Panel" parent="Game/GUI/Popups/Mooz/RightBar/Chat/Messages/Message3"]
 layout_mode = 0
 offset_left = 11.0
 offset_top = 23.5
@@ -383,7 +381,7 @@ offset_right = 32.0
 offset_bottom = 43.5
 theme_override_styles/panel = SubResource("StyleBoxFlat_dw3dh")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/RightBar/Chat/Messages/Control3/Pfp"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/RightBar/Chat/Messages/Message3/Pfp"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -400,7 +398,7 @@ theme_override_font_sizes/normal_font_size = 10
 bbcode_enabled = true
 text = "[center] J"
 
-[node name="Message" type="Panel" parent="Game/GUI/Popups/Mooz/RightBar/Chat/Messages/Control3"]
+[node name="Message" type="Panel" parent="Game/GUI/Popups/Mooz/RightBar/Chat/Messages/Message3"]
 layout_mode = 2
 offset_left = 37.0
 offset_top = 21.5
@@ -482,12 +480,12 @@ grow_horizontal = 0
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_6kidq")
 
-[node name="Control" type="Control" parent="Game/GUI/Popups/Mooz/RightBar"]
+[node name="Participants" type="Control" parent="Game/GUI/Popups/Mooz/RightBar"]
 anchors_preset = 0
 offset_right = 189.0
 offset_bottom = 223.0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/RightBar/Control"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/RightBar/Participants"]
 layout_mode = 0
 offset_top = 8.0
 offset_right = 190.0
@@ -498,17 +496,17 @@ theme_override_font_sizes/normal_font_size = 10
 bbcode_enabled = true
 text = "[center] Participants (4)"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Game/GUI/Popups/Mooz/RightBar/Control"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Game/GUI/Popups/Mooz/RightBar/Participants"]
 layout_mode = 0
 offset_top = 42.0
 offset_right = 189.0
 offset_bottom = 217.0
 
-[node name="Control" type="Control" parent="Game/GUI/Popups/Mooz/RightBar/Control/VBoxContainer"]
+[node name="Individual" type="Control" parent="Game/GUI/Popups/Mooz/RightBar/Participants/VBoxContainer"]
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 
-[node name="Panel" type="Panel" parent="Game/GUI/Popups/Mooz/RightBar/Control/VBoxContainer/Control"]
+[node name="Panel" type="Panel" parent="Game/GUI/Popups/Mooz/RightBar/Participants/VBoxContainer/Individual"]
 layout_mode = 0
 offset_left = 20.0
 offset_top = -0.5
@@ -516,7 +514,7 @@ offset_right = 39.0
 offset_bottom = 18.5
 theme_override_styles/panel = SubResource("StyleBoxFlat_qs7y5")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/RightBar/Control/VBoxContainer/Control/Panel"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/RightBar/Participants/VBoxContainer/Individual/Panel"]
 layout_mode = 0
 offset_top = 1.0
 offset_right = 19.0
@@ -525,7 +523,7 @@ theme_override_font_sizes/normal_font_size = 9
 bbcode_enabled = true
 text = "[center] J"
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/RightBar/Control/VBoxContainer/Control"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/RightBar/Participants/VBoxContainer/Individual"]
 layout_mode = 0
 offset_left = 47.0
 offset_top = 3.0
@@ -536,11 +534,11 @@ theme_override_fonts/normal_font = SubResource("SystemFont_u8kui")
 theme_override_font_sizes/normal_font_size = 9
 text = "Joe Swanson"
 
-[node name="Control2" type="Control" parent="Game/GUI/Popups/Mooz/RightBar/Control/VBoxContainer"]
+[node name="Individual2" type="Control" parent="Game/GUI/Popups/Mooz/RightBar/Participants/VBoxContainer"]
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 
-[node name="Panel" type="Panel" parent="Game/GUI/Popups/Mooz/RightBar/Control/VBoxContainer/Control2"]
+[node name="Panel" type="Panel" parent="Game/GUI/Popups/Mooz/RightBar/Participants/VBoxContainer/Individual2"]
 layout_mode = 0
 offset_left = 20.0
 offset_top = -0.5
@@ -548,7 +546,7 @@ offset_right = 39.0
 offset_bottom = 18.5
 theme_override_styles/panel = SubResource("StyleBoxFlat_qs7y5")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/RightBar/Control/VBoxContainer/Control2/Panel"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/RightBar/Participants/VBoxContainer/Individual2/Panel"]
 layout_mode = 0
 offset_top = 1.0
 offset_right = 19.0
@@ -557,7 +555,7 @@ theme_override_font_sizes/normal_font_size = 9
 bbcode_enabled = true
 text = "[center] J"
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/RightBar/Control/VBoxContainer/Control2"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/RightBar/Participants/VBoxContainer/Individual2"]
 layout_mode = 0
 offset_left = 47.0
 offset_top = 3.0
@@ -568,11 +566,11 @@ theme_override_fonts/normal_font = SubResource("SystemFont_u8kui")
 theme_override_font_sizes/normal_font_size = 9
 text = "Joe Swanson"
 
-[node name="Control3" type="Control" parent="Game/GUI/Popups/Mooz/RightBar/Control/VBoxContainer"]
+[node name="Individual3" type="Control" parent="Game/GUI/Popups/Mooz/RightBar/Participants/VBoxContainer"]
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 
-[node name="Panel" type="Panel" parent="Game/GUI/Popups/Mooz/RightBar/Control/VBoxContainer/Control3"]
+[node name="Panel" type="Panel" parent="Game/GUI/Popups/Mooz/RightBar/Participants/VBoxContainer/Individual3"]
 layout_mode = 0
 offset_left = 20.0
 offset_top = -0.5
@@ -580,7 +578,7 @@ offset_right = 39.0
 offset_bottom = 18.5
 theme_override_styles/panel = SubResource("StyleBoxFlat_qs7y5")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/RightBar/Control/VBoxContainer/Control3/Panel"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/RightBar/Participants/VBoxContainer/Individual3/Panel"]
 layout_mode = 0
 offset_top = 1.0
 offset_right = 19.0
@@ -589,7 +587,7 @@ theme_override_font_sizes/normal_font_size = 9
 bbcode_enabled = true
 text = "[center] J"
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/RightBar/Control/VBoxContainer/Control3"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/RightBar/Participants/VBoxContainer/Individual3"]
 layout_mode = 0
 offset_left = 47.0
 offset_top = 3.0
@@ -600,11 +598,11 @@ theme_override_fonts/normal_font = SubResource("SystemFont_u8kui")
 theme_override_font_sizes/normal_font_size = 9
 text = "Joe Swanson"
 
-[node name="Control4" type="Control" parent="Game/GUI/Popups/Mooz/RightBar/Control/VBoxContainer"]
+[node name="Individual4" type="Control" parent="Game/GUI/Popups/Mooz/RightBar/Participants/VBoxContainer"]
 custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 
-[node name="Panel" type="Panel" parent="Game/GUI/Popups/Mooz/RightBar/Control/VBoxContainer/Control4"]
+[node name="Panel" type="Panel" parent="Game/GUI/Popups/Mooz/RightBar/Participants/VBoxContainer/Individual4"]
 layout_mode = 0
 offset_left = 20.0
 offset_top = -0.5
@@ -612,7 +610,7 @@ offset_right = 39.0
 offset_bottom = 18.5
 theme_override_styles/panel = SubResource("StyleBoxFlat_qs7y5")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/RightBar/Control/VBoxContainer/Control4/Panel"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/RightBar/Participants/VBoxContainer/Individual4/Panel"]
 layout_mode = 0
 offset_top = 1.0
 offset_right = 19.0
@@ -621,7 +619,7 @@ theme_override_font_sizes/normal_font_size = 9
 bbcode_enabled = true
 text = "[center] J"
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/RightBar/Control/VBoxContainer/Control4"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/RightBar/Participants/VBoxContainer/Individual4"]
 layout_mode = 0
 offset_left = 47.0
 offset_top = 3.0
