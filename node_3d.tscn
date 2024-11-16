@@ -948,7 +948,7 @@ shape = SubResource("BoxShape3D_ppeao")
 [node name="RightDHit" type="Area3D" parent="Game/WorldEnvironment/Facing Player/Desk/MeshInstance3D" node_paths=PackedStringArray("popups")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.273239, 0, 2.38419e-07)
 script = ExtResource("11_vsg3n")
-popups = NodePath("../../../../../GUI/Popups/Drawer")
+popups = NodePath("../../../../../GUI/Popups")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Game/WorldEnvironment/Facing Player/Desk/MeshInstance3D/RightDHit"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14063, -0.0601349, -0.035923)
