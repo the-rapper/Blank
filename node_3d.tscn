@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://vn45hbpedsc7"]
+[gd_scene load_steps=46 format=3 uid="uid://vn45hbpedsc7"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_1nw3k"]
 [ext_resource type="Texture2D" uid="uid://dj50dl1plwird" path="res://Images/desk_1.png" id="1_pp4dt"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cj2uveebx7lyw" path="res://Models/plug.glb" id="4_rdwui"]
 [ext_resource type="Script" path="res://laptop_hit.gd" id="6_22x0x"]
 [ext_resource type="Texture2D" uid="uid://do8b3knaduioa" path="res://Images/door_closed.png.png" id="8_pgof8"]
+[ext_resource type="Texture2D" uid="uid://b0l4f7pv3xd4e" path="res://Images/Cat Poster.png" id="10_ah3vl"]
 [ext_resource type="Script" path="res://game_logic_container.gd" id="10_fjovq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_akgym"]
@@ -915,6 +916,12 @@ shape = SubResource("BoxShape3D_kelnh")
 [node name="Sprite3D" type="Sprite3D" parent="Game/WorldEnvironment/Door"]
 transform = Transform3D(-0.0299597, 0, 1.02947, 0, 1.88214, 0, -1.24188, 0, -0.0248359, 1.19969, -1.5319, -1.04844)
 texture = ExtResource("8_pgof8")
+
+[node name="Cat Poster" type="Node3D" parent="Game/WorldEnvironment"]
+
+[node name="Cat Poster" type="Sprite3D" parent="Game/WorldEnvironment/Cat Poster"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.804761, -1.55022, -1.5937)
+texture = ExtResource("10_ah3vl")
 
 [node name="GameLogicContainer" type="Node" parent="Game"]
 script = ExtResource("10_fjovq")
