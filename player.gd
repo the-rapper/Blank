@@ -11,11 +11,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	turnaround()
 	look_down()
-<<<<<<< Updated upstream
-=======
 	open_menu()
 	pass
->>>>>>> Stashed changes
 	
 
 var turnList = []
@@ -43,11 +40,9 @@ func look_down() -> void:
 	elif rotation_degrees.x < 0:
 		var tween = get_tree().create_tween().set_parallel(false)
 		tween.tween_property(self, "rotation_degrees", Vector3(0,turn_deg,0), 0.1)
-<<<<<<< Updated upstream
-=======
+
 
 # if exit pressed in gameplay, switch to menu scene
 func open_menu() -> void:
 	if Input.is_action_just_pressed("exit"):
 		get_tree().change_scene_to_file("res://Main menu/MainMenu.tscn")
->>>>>>> Stashed changes
