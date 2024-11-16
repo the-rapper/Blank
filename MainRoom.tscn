@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://b3w0u2fyyrpnc"]
+[gd_scene load_steps=65 format=3 uid="uid://vfdq1cvm2jxp"]
 
 [ext_resource type="Script" path="res://pop.gd" id="1_2o84w"]
 [ext_resource type="Script" path="res://mooz.gd" id="2_auvs0"]
@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://cjq6luovhblhy" path="res://icon.svg" id="6_1egyw"]
 [ext_resource type="Texture2D" uid="uid://hve0bqb6w3l" path="res://Images/minimize button.png" id="6_f0ryp"]
 [ext_resource type="Script" path="res://clutter.gd" id="7_lfjdn"]
-[ext_resource type="Script" path="res://minimizeMooz.gd" id="7_wsr26"]
 [ext_resource type="Script" path="res://drawer_collect.gd" id="8_yl1n6"]
 [ext_resource type="Script" path="res://drop_zone.gd" id="9_xrk4x"]
 [ext_resource type="Texture2D" uid="uid://dlw5t28ktlt7n" path="res://Textures/99f3b05e659e42acb1f79e24b8f86809.webp" id="10_ugylm"]
@@ -25,6 +24,7 @@
 [ext_resource type="Script" path="res://dad.gd" id="20_4vjfi"]
 [ext_resource type="Texture2D" uid="uid://dnv126b4qn0r0" path="res://Images/Cat_Poster_2.png" id="21_d4pfa"]
 [ext_resource type="Script" path="res://game_logic_container.gd" id="22_4fkiu"]
+[ext_resource type="Script" path="res://rustle_dad.gd" id="23_tcfyy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_akgym"]
 bg_color = Color(0.0666667, 0.0627451, 0.0666667, 0.643137)
@@ -192,6 +192,64 @@ size = Vector3(0.527893, 0.115936, 0.126556)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kelnh"]
 size = Vector3(2.42432, 3.25055, 1.70605)
+
+[sub_resource type="Animation" id="Animation_bqd5p"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_pfaha"]
+resource_name = "Stand"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0666667),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_elhfs"]
+resource_name = "walk"
+length = 1.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0666667, 0.866667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6l327"]
+_data = {
+"RESET": SubResource("Animation_bqd5p"),
+"Stand": SubResource("Animation_pfaha"),
+"walk": SubResource("Animation_elhfs")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_losis"]
+size = Vector3(0.30249, 0.446289, 0.142578)
 
 [node name="Root2" type="Node3D"]
 
@@ -812,7 +870,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="TextureButton" type="TextureButton" parent="Game/GUI/Popups/Mooz/Bottom Bar Controls/Minimize" node_paths=PackedStringArray("mooz")]
+[node name="TextureButton" type="TextureButton" parent="Game/GUI/Popups/Mooz/Bottom Bar Controls/Minimize"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 17.5
@@ -823,8 +881,6 @@ offset_top = -0.019989
 offset_right = -6.10352e-05
 offset_bottom = -0.0199585
 texture_normal = ExtResource("6_f0ryp")
-script = ExtResource("7_wsr26")
-mooz = NodePath("../../..")
 
 [node name="Connection" type="Control" parent="Game/GUI/Popups"]
 visible = false
@@ -1024,12 +1080,26 @@ transform = Transform3D(-0.0299597, 0, 1.02947, 0, 1.88214, 0, -1.24188, 0, -0.0
 texture_filter = 2
 texture = ExtResource("18_5e4nh")
 
-[node name="Dad" type="Sprite3D" parent="Game/WorldEnvironment/Door"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.6212, -1.67053, -1.05856)
+[node name="Dad" type="Sprite3D" parent="Game/WorldEnvironment/Door" node_paths=PackedStringArray("player")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.48997, -1.68372, -1.05002)
+offset = Vector2(0, -6)
 texture_filter = 2
 texture = ExtResource("19_jamtf")
 vframes = 2
 script = ExtResource("20_4vjfi")
+player = NodePath("../../Player")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Game/WorldEnvironment/Door/Dad"]
+libraries = {
+"": SubResource("AnimationLibrary_6l327")
+}
+
+[node name="Area3D" type="Area3D" parent="Game/WorldEnvironment/Door/Dad"]
+script = ExtResource("23_tcfyy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Game/WorldEnvironment/Door/Dad/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0250244, -0.0639648, 0.00488281)
+shape = SubResource("BoxShape3D_losis")
 
 [node name="Cat Poster" type="Node3D" parent="Game/WorldEnvironment"]
 
