@@ -40,4 +40,5 @@ func look_down() -> void:
 
 func open_menu() -> void:
 	if Input.is_action_just_pressed("exit"):
+		Globals.can_interact = false
 		get_tree().change_scene_to_file("res://Main menu/MainMenu.tscn")

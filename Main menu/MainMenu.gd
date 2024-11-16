@@ -55,6 +55,7 @@ func _on_button_normal(button: Button):
 
 func _on_start_pressed():
 	print("Start button pressed!")
+	Globals.can_interact = true
 	transition_to_scene("res://node_3d.tscn")
 
 func _on_settings_pressed():
