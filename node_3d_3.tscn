@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://c0gqkhlcppxbv"]
+[gd_scene load_steps=54 format=3 uid="uid://c0gqkhlcppxbv"]
 
 [ext_resource type="Script" path="res://pop.gd" id="1_tdy80"]
 [ext_resource type="Script" path="res://drawer_game.gd" id="2_jfnrs"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://cj2uveebx7lyw" path="res://Models/plug.glb" id="14_tkiia"]
 [ext_resource type="Texture2D" uid="uid://do8b3knaduioa" path="res://Images/door_closed.png.png" id="15_fb7ja"]
 [ext_resource type="Texture2D" uid="uid://dnv126b4qn0r0" path="res://Images/Cat_Poster_2.png" id="16_gssj8"]
+[ext_resource type="Texture2D" path="res://Images/DadSS.png" id="17_jvcti"]
 [ext_resource type="Script" path="res://game_logic_container.gd" id="17_okyh3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_akgym"]
@@ -983,6 +984,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.804761, -1.65856, -1.62515
 pixel_size = 0.0002
 texture_filter = 0
 texture = ExtResource("16_gssj8")
+
+[node name="Door" type="Node3D" parent="Game/WorldEnvironment/Cat Poster"]
+
+[node name="Sprite3D" type="Sprite3D" parent="Game/WorldEnvironment/Cat Poster/Door"]
+transform = Transform3D(-0.0299597, 0, 1.02947, 0, 1.88214, 0, -1.24188, 0, -0.0248359, 1.19969, -1.5319, -1.04844)
+texture_filter = 2
+texture = ExtResource("15_fb7ja")
+
+[node name="Dad" type="Sprite3D" parent="Game/WorldEnvironment/Cat Poster/Door"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.6212, -1.67053, -1.05856)
+texture_filter = 2
+texture = ExtResource("17_jvcti")
+vframes = 2
 
 [node name="GameLogicContainer" type="Node" parent="Game"]
 script = ExtResource("17_okyh3")
