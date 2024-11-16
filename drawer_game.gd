@@ -31,6 +31,7 @@ func create_clutter():
 		clutter.position = point
 		clutter.texture = state[point]
 		clutter.set_script(clutter_script)
+		created.append(clutter)
 		add_child(clutter)
 func setup(): 
 	for i in range(0,n):
