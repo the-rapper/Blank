@@ -1,32 +1,81 @@
-[gd_scene load_steps=2 format=3 uid="uid://vn45hbpedsc7"]
+[gd_scene load_steps=7 format=3 uid="uid://vn45hbpedsc7"]
+
+[ext_resource type="Script" path="res://turnaround.gd" id="1_8ucbt"]
+[ext_resource type="Texture2D" uid="uid://dj50dl1plwird" path="res://Images/desk_1.png" id="1_pp4dt"]
+
+[sub_resource type="Environment" id="Environment_robs0"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_kmr7r"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_apgk0"]
+transparency = 1
+albedo_texture = ExtResource("1_pp4dt")
+metallic_specular = 0.43
+texture_repeat = false
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_fi84m"]
+uv2_padding = 2.32
+size = Vector2(0.5, 0.5)
+orientation = 2
+
 [node name="Node3D" type="Node3D"]
 
-[node name="Floor" type="MeshInstance3D" parent="."]
+[node name="Game" type="Node" parent="."]
+
+[node name="GUI" type="CanvasLayer" parent="Game"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Game"]
+environment = SubResource("Environment_robs0")
+
+[node name="Room" type="Node3D" parent="Game/WorldEnvironment"]
+transform = Transform3D(0.381336, 0, 0, 0, 0.381336, 0, 0, 0, 0.381336, -0.0231339, -1.36202, -0.569539)
+
+[node name="Floor" type="MeshInstance3D" parent="Game/WorldEnvironment/Room"]
 transform = Transform3D(7.13531, 0, 0, 0, 0.0630675, 0, 0, 0, 5.64831, 0.00530513, -1.70233, -0.103327)
 mesh = SubResource("BoxMesh_kmr7r")
+skeleton = NodePath("../../../..")
 
-[node name="Wall Z-" type="MeshInstance3D" parent="."]
+[node name="Wall Z-" type="MeshInstance3D" parent="Game/WorldEnvironment/Room"]
 transform = Transform3D(7.13531, 0, 0, 0, -2.75677e-09, -5.64831, 0, 0.0630675, -2.46895e-07, -0.0028944, 1.0603, -2.80405)
 mesh = SubResource("BoxMesh_kmr7r")
+skeleton = NodePath("../../../..")
 
-[node name="Wall Z" type="MeshInstance3D" parent="."]
+[node name="Wall Z" type="MeshInstance3D" parent="Game/WorldEnvironment/Room"]
 transform = Transform3D(7.13531, 0, 0, 0, -2.75677e-09, -5.64831, 0, 0.0630675, -2.46895e-07, 0.00530513, 1.00239, 2.71068)
 mesh = SubResource("BoxMesh_kmr7r")
+skeleton = NodePath("../../../..")
 
-[node name="Wall X" type="MeshInstance3D" parent="."]
+[node name="Wall X" type="MeshInstance3D" parent="Game/WorldEnvironment/Room"]
 transform = Transform3D(-3.11894e-07, 0.0630675, -2.46895e-07, 0, -2.75677e-09, -5.64831, -7.13531, -2.75677e-09, 1.07921e-14, 3.43988, 1.00239, 0.339894)
 mesh = SubResource("BoxMesh_kmr7r")
+skeleton = NodePath("../../../..")
 
-[node name="Wall X-" type="MeshInstance3D" parent="."]
+[node name="Wall X-" type="MeshInstance3D" parent="Game/WorldEnvironment/Room"]
 transform = Transform3D(-3.11894e-07, 0.0630675, -2.46895e-07, 0, -2.75677e-09, -5.64831, -7.13531, -2.75677e-09, 1.07921e-14, -3.4724, 1.00239, 0.339894)
 mesh = SubResource("BoxMesh_kmr7r")
+skeleton = NodePath("../../../..")
 
-[node name="Ceiling" type="MeshInstance3D" parent="."]
+[node name="Ceiling" type="MeshInstance3D" parent="Game/WorldEnvironment/Room"]
 transform = Transform3D(7.13531, 0, 0, 0, 0.0630675, 0, 0, 0, 5.64831, 0.00530513, 1.53961, -0.103327)
 mesh = SubResource("BoxMesh_kmr7r")
+skeleton = NodePath("../../../..")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0567541, 0.500076, -0.0188115)
+[node name="OmniLight3D" type="OmniLight3D" parent="Game/WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 0.999918, 0.0127929, 0, -0.0127929, 0.999918, 0.0567541, 0.683057, -0.0188115)
+
+[node name="Player" type="Node3D" parent="Game/WorldEnvironment"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.75017, -1.67023, -1.20654)
+script = ExtResource("1_8ucbt")
+
+[node name="Camera3D" type="Camera3D" parent="Game/WorldEnvironment/Player"]
+fov = 56.5
+
+[node name="Desk" type="Node3D" parent="Game/WorldEnvironment"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.55202, -1.73798, -1.20349)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Game/WorldEnvironment/Desk"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0410581, 0.31911)
+material_override = SubResource("StandardMaterial3D_apgk0")
+mesh = SubResource("PlaneMesh_fi84m")
+
+[node name="Main Menu" type="CanvasLayer" parent="."]
