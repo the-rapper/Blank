@@ -690,11 +690,14 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -21.0
-offset_right = 21.0
-offset_bottom = 27.0
+offset_left = -53.0
+offset_top = -8.5
+offset_right = 234.0
+offset_bottom = 335.5
 grow_horizontal = 2
+scale = Vector2(0.15, 0.15)
 texture_normal = ExtResource("2_skm02")
+stretch_mode = 0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/Control/Mic"]
 layout_mode = 1
@@ -731,11 +734,12 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -21.0
-offset_right = 841.0
-offset_bottom = 321.0
+offset_left = -43.0
+offset_top = -5.5
+offset_right = 819.0
+offset_bottom = 315.5
 grow_horizontal = 2
-scale = Vector2(0.2, 0.2)
+scale = Vector2(0.1, 0.1)
 texture_normal = ExtResource("3_c7n2k")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/Control/Video"]
@@ -781,6 +785,21 @@ theme_override_fonts/normal_font = SubResource("SystemFont_2amwr")
 theme_override_font_sizes/normal_font_size = 10
 bbcode_enabled = true
 text = "[center]Leave"
+
+[node name="Minimize" type="Control" parent="Game/GUI/Popups/Mooz/Control"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureButton" type="TextureButton" parent="Game/GUI/Popups/Mooz/Control/Minimize"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Mooz/Control/Minimize"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="Connection" type="Control" parent="Game/GUI/Popups"]
 visible = false
