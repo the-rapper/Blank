@@ -14,6 +14,10 @@ height = 540
 fill_from = Vector2(0, 0.0458716)
 fill_to = Vector2(0.123853, 0.801733)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vj6yb"]
+draw_center = false
+corner_detail = 7
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7hqbv"]
 bg_color = Color(0.917647, 0.756863, 1, 1)
 border_width_left = 2
@@ -38,10 +42,6 @@ border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vj6yb"]
-draw_center = false
-corner_detail = 7
 
 [sub_resource type="Animation" id="Animation_qajnd"]
 length = 0.001
@@ -211,6 +211,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("2_lryuh")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -252,17 +254,21 @@ grow_vertical = 2
 texture = SubResource("GradientTexture2D_cd6mr")
 stretch_mode = 6
 
-[node name="TransitionOverlay" type="ColorRect" parent="."]
-modulate = Color(1, 1, 1, 0)
+[node name="TitleLabel" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -2.0
-offset_bottom = -2.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -290.0
+offset_top = 381.0
+offset_right = 340.0
+offset_bottom = 470.0
 grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.803415, 0.666997, 0.990612, 1)
+theme_override_fonts/font = ExtResource("1_b8pcp")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_vj6yb")
+text = "UNSTABLE CONNECTION"
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
@@ -280,6 +286,7 @@ layout_mode = 2
 theme_override_constants/separation = 20
 
 [node name="StartButton" type="Button" parent="MarginContainer/MenuItems"]
+process_mode = 3
 custom_minimum_size = Vector2(400, 80)
 layout_mode = 2
 mouse_default_cursor_shape = 2
@@ -291,8 +298,10 @@ text = "Start"
 script = ExtResource("2_lryuh")
 
 [node name="Continue" type="Button" parent="MarginContainer/MenuItems"]
+process_mode = 3
 custom_minimum_size = Vector2(400, 80)
 layout_mode = 2
+mouse_default_cursor_shape = 2
 theme_override_colors/font_hover_color = Color(0.333333, 0.282353, 0.380392, 1)
 theme_override_colors/font_pressed_color = Color(0.333333, 0.282353, 0.380392, 1)
 theme_override_colors/font_color = Color(0.333333, 0.282353, 0.384314, 1)
@@ -303,8 +312,10 @@ text = "Continue"
 script = ExtResource("2_lryuh")
 
 [node name="SettingsButton" type="Button" parent="MarginContainer/MenuItems"]
+process_mode = 3
 custom_minimum_size = Vector2(400, 80)
 layout_mode = 2
+mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("1_b8pcp")
 theme_override_font_sizes/font_size = 65
 theme_override_styles/hover = SubResource("StyleBoxFlat_cuqw3")
@@ -312,8 +323,10 @@ text = "Settings"
 script = ExtResource("2_lryuh")
 
 [node name="QuitButton" type="Button" parent="MarginContainer/MenuItems"]
+process_mode = 3
 custom_minimum_size = Vector2(400, 80)
 layout_mode = 2
+mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("1_b8pcp")
 theme_override_font_sizes/font_size = 65
 theme_override_styles/hover = SubResource("StyleBoxFlat_k4non")
@@ -321,28 +334,25 @@ action_mode = 0
 text = "Quit"
 script = ExtResource("2_lryuh")
 
-[node name="TitleLabel" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -290.0
-offset_top = 381.0
-offset_right = 340.0
-offset_bottom = 470.0
-grow_horizontal = 2
-theme_override_colors/font_color = Color(0.803415, 0.666997, 0.990612, 1)
-theme_override_fonts/font = ExtResource("1_b8pcp")
-theme_override_font_sizes/font_size = 100
-theme_override_styles/normal = SubResource("StyleBoxFlat_vj6yb")
-text = "UNSTABLE CONNECTION"
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_0q0e1")
 }
 autoplay = "menu_fade_in"
 
-[connection signal="pressed" from="MarginContainer/MenuItems/StartButton" to="MarginContainer/MenuItems/StartButton" method="_on_start_pressed"]
-[connection signal="pressed" from="MarginContainer/MenuItems/SettingsButton" to="MarginContainer/MenuItems/SettingsButton" method="_on_settings_pressed"]
-[connection signal="pressed" from="MarginContainer/MenuItems/QuitButton" to="MarginContainer/MenuItems/QuitButton" method="_on_quit_pressed"]
+[node name="TransitionOverlay" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[connection signal="pressed" from="MarginContainer/MenuItems/StartButton" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MarginContainer/MenuItems/SettingsButton" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="MarginContainer/MenuItems/QuitButton" to="." method="_on_quit_pressed"]
