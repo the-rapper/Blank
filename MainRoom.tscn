@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://vn45hbpedsc7"]
+[gd_scene load_steps=68 format=3 uid="uid://vn45hbpedsc7"]
 
 [ext_resource type="Script" path="res://pop.gd" id="1_2o84w"]
 [ext_resource type="Script" path="res://mooz.gd" id="2_auvs0"]
@@ -25,6 +25,7 @@
 [ext_resource type="Script" path="res://dad.gd" id="20_4vjfi"]
 [ext_resource type="Texture2D" uid="uid://dnv126b4qn0r0" path="res://Images/Cat_Poster_2.png" id="21_d4pfa"]
 [ext_resource type="Script" path="res://game_logic_container.gd" id="22_4fkiu"]
+[ext_resource type="Texture2D" uid="uid://bev63qvrjuete" path="res://Images/Bed.png" id="22_p63t1"]
 [ext_resource type="Script" path="res://rustle_dad.gd" id="23_tcfyy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_akgym"]
@@ -1095,6 +1096,11 @@ shape = SubResource("BoxShape3D_kelnh")
 transform = Transform3D(-0.0299597, 0, 1.02947, 0, 1.88214, 0, -1.24188, 0, -0.0248359, 1.19969, -1.5319, -1.04844)
 texture_filter = 2
 texture = ExtResource("18_5e4nh")
+
+[node name="Sprite3D" type="Sprite3D" parent="Game/WorldEnvironment/Door/Sprite3D"]
+transform = Transform3D(-0.0120605, 0.000111385, 1.0297, -0.00927559, 0.299948, -0.000843498, -0.499768, -0.00556966, -0.0248331, -0.65788, -0.116842, -1.77713)
+texture_filter = 2
+texture = ExtResource("22_p63t1")
 
 [node name="Dad" type="Sprite3D" parent="Game/WorldEnvironment/Door" node_paths=PackedStringArray("player")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.48997, -1.68372, -1.05002)
