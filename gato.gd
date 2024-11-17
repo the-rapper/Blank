@@ -17,7 +17,6 @@ func try_and_retry() -> void:
 	if(float((randi() % 100) + 1) / 100 <= odds):
 		silly = true
 	reset_timer()
-	timer.start()
 	return
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -32,7 +31,6 @@ func reset_timer() -> void:
 func calm() -> void:
 	reset_timer()
 	silly = false
-	timer.start()
 	print("calm")
 func silly_step() -> void:
 	if not ray.is_colliding():

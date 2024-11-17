@@ -1,23 +1,29 @@
-[gd_scene load_steps=67 format=3 uid="uid://b3w0u2fyyrpnc"]
+[gd_scene load_steps=81 format=3 uid="uid://vfdq1cvm2jxp"]
 
 [ext_resource type="Script" path="res://pop.gd" id="1_2o84w"]
 [ext_resource type="Script" path="res://mooz.gd" id="2_auvs0"]
 [ext_resource type="Texture2D" uid="uid://bg5jnvdbjj57h" path="res://Images/Unmute.png" id="3_74ipc"]
 [ext_resource type="Texture2D" uid="uid://xp8tsbhjc2yh" path="res://Images/mooz logo.png" id="3_iuewn"]
+[ext_resource type="Texture2D" uid="uid://cj3lox8c3hpfi" path="res://Images/Stock Photo_1.png" id="4_jsql7"]
 [ext_resource type="Texture2D" uid="uid://dl6fdnv6uelfw" path="res://Images/On Video.png" id="4_xwt4s"]
 [ext_resource type="Script" path="res://drawer_game.gd" id="5_ib0sg"]
 [ext_resource type="Script" path="res://call_time.gd" id="5_nl5wc"]
-[ext_resource type="Texture2D" uid="uid://cjq6luovhblhy" path="res://icon.svg" id="6_1egyw"]
+[ext_resource type="Texture2D" uid="uid://cydcc5f7ot1r7" path="res://Images/Stock Photo_2.png" id="5_ynk61"]
+[ext_resource type="Texture2D" uid="uid://g81q7xyct4se" path="res://Images/Stock Photo_3.png" id="6_1fxbr"]
 [ext_resource type="Script" path="res://clutter.gd" id="7_lfjdn"]
 [ext_resource type="Script" path="res://drawer_collect.gd" id="8_yl1n6"]
 [ext_resource type="Script" path="res://drop_zone.gd" id="9_xrk4x"]
 [ext_resource type="Texture2D" uid="uid://dlw5t28ktlt7n" path="res://Textures/99f3b05e659e42acb1f79e24b8f86809.webp" id="10_ugylm"]
 [ext_resource type="Script" path="res://player.gd" id="11_meyn6"]
+[ext_resource type="Texture2D" uid="uid://clfw5h71sgqnt" path="res://Images/Pencil.png" id="11_srg04"]
+[ext_resource type="Texture2D" uid="uid://crnsrs0o7fgh8" path="res://Images/Ruler.png" id="12_3t2n4"]
 [ext_resource type="Script" path="res://click.gd" id="12_e334y"]
+[ext_resource type="Texture2D" uid="uid://b63k3toc3jt5k" path="res://Images/Scissors.png" id="13_enk21"]
 [ext_resource type="Script" path="res://facing_player.gd" id="13_vwm3k"]
+[ext_resource type="Texture2D" uid="uid://cgy3bjodkwms4" path="res://Images/Paper.png" id="14_2vm85"]
 [ext_resource type="Script" path="res://drawer_hit.gd" id="14_vpvhb"]
 [ext_resource type="Script" path="res://laptop_hit.gd" id="15_4khke"]
-[ext_resource type="Texture2D" uid="uid://dj50dl1plwird" path="res://Images/desk_1.png" id="16_87naj"]
+[ext_resource type="Texture2D" uid="uid://ddv3my05tsokx" path="res://Images/Charger.png" id="16_i6ier"]
 [ext_resource type="PackedScene" uid="uid://cj2uveebx7lyw" path="res://Models/plug.glb" id="17_58bbx"]
 [ext_resource type="Texture2D" uid="uid://do8b3knaduioa" path="res://Images/door_closed.png.png" id="18_5e4nh"]
 [ext_resource type="Texture2D" uid="uid://hv26iii0evlv" path="res://Images/DadSS.png" id="19_jamtf"]
@@ -26,6 +32,11 @@
 [ext_resource type="Script" path="res://game_logic_container.gd" id="22_4fkiu"]
 [ext_resource type="Texture2D" uid="uid://bev63qvrjuete" path="res://Images/Bed.png" id="22_p63t1"]
 [ext_resource type="Script" path="res://rustle_dad.gd" id="23_tcfyy"]
+[ext_resource type="Texture2D" uid="uid://c7npt85cm83ls" path="res://Images/Updated Desk.png" id="25_i3ti3"]
+[ext_resource type="Script" path="res://gato.gd" id="26_wsy4e"]
+[ext_resource type="Texture2D" uid="uid://fts6h7oxvrcy" path="res://Images/nyan-cat-sparkles_Still Photo.png" id="27_vofs7"]
+[ext_resource type="Texture2D" uid="uid://ck27da8a3fq7e" path="res://Images/nyan-cat-sparkles_Spritesheet.png" id="28_fwxi7"]
+[ext_resource type="Script" path="res://collide_gato.gd" id="29_0dpe8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_akgym"]
 bg_color = Color(0.0666667, 0.0627451, 0.0666667, 0.643137)
@@ -127,9 +138,6 @@ corner_radius_bottom_left = 20
 [sub_resource type="SystemFont" id="SystemFont_u8kui"]
 font_names = PackedStringArray("Segoe UI Variable Small")
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_wro7u"]
-size = Vector2(365, 200)
-
 [sub_resource type="ViewportTexture" id="ViewportTexture_w8nmi"]
 viewport_path = NodePath("Game/WorldEnvironment/Facing Player/Desk/MeshInstance3D/SubViewport")
 
@@ -173,13 +181,11 @@ variation_opentype = {
 2003265652: 825
 }
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7e3fs"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pauqq"]
 bg_color = Color(0.0671954, 0.0716912, 0.0933782, 1)
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_riry4"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_iu5op"]
-size = Vector2(42, 43)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xg774"]
+size = Vector2(135, 93)
 
 [sub_resource type="Environment" id="Environment_robs0"]
 
@@ -188,11 +194,225 @@ albedo_texture = ExtResource("10_ugylm")
 
 [sub_resource type="BoxMesh" id="BoxMesh_kmr7r"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_v5m8l"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_2b368"]
 size = Vector3(0.193485, 0.172363, 0.131126)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_ppeao"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_42xk8"]
 size = Vector3(0.527893, 0.115936, 0.126556)
+
+[sub_resource type="Animation" id="Animation_cwkd4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("27_vofs7")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:pixel_size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0005]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:offset")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_3ygsu"]
+resource_name = "gato"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("27_vofs7")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.0001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, 1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:pixel_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0005]
+}
+
+[sub_resource type="Animation" id="Animation_cowf3"]
+resource_name = "run"
+length = 0.55
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("28_fwxi7")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.0666667, 0.133333, 0.2, 0.266667, 0.3, 0.333333, 0.383333, 0.466667, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 3, 4, 5, 6, 7, 9, 9, 11]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:pixel_size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0008]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:offset")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_07wcv"]
+_data = {
+"RESET": SubResource("Animation_cwkd4"),
+"gato": SubResource("Animation_3ygsu"),
+"run": SubResource("Animation_cowf3")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ei6ph"]
+size = Vector3(0.393555, 0.221313, 0.143127)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kelnh"]
 size = Vector3(2.42432, 3.25055, 1.70605)
@@ -284,10 +504,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -488.0
-offset_top = -267.5
-offset_right = 488.0
-offset_bottom = 267.5
+offset_left = -94.5
+offset_top = -227.5
+offset_right = -94.5
+offset_bottom = -227.5
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
@@ -297,10 +517,9 @@ popups = NodePath("..")
 
 [node name="TextureRect" type="TextureRect" parent="Game/GUI/Popups/Mooz"]
 layout_mode = 0
-offset_left = 301.5
-offset_top = -70.0
-offset_right = 462.5
-offset_bottom = 92.0
+offset_left = -55.0
+offset_top = -162.0
+offset_right = 106.0
 texture = ExtResource("3_iuewn")
 expand_mode = 1
 
@@ -310,7 +529,8 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -189.0
+offset_left = 367.5
+offset_right = 556.5
 offset_bottom = 533.0
 grow_horizontal = 0
 mouse_filter = 1
@@ -713,39 +933,40 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -462.0
-offset_top = 73.0
-offset_right = 276.0
-offset_bottom = 478.0
+offset_left = -393.5
+offset_top = 4.0
+offset_right = 360.5
+offset_bottom = 465.0
 grow_horizontal = 2
 theme_override_constants/h_separation = 5
 theme_override_constants/v_separation = 5
 columns = 2
 
-[node name="TextureRect" type="TextureRect" parent="Game/GUI/Popups/Mooz/GridContainer"]
-layout_mode = 2
-texture = SubResource("PlaceholderTexture2D_wro7u")
-
-[node name="TextureRect2" type="TextureRect" parent="Game/GUI/Popups/Mooz/GridContainer"]
-layout_mode = 2
-texture = SubResource("PlaceholderTexture2D_wro7u")
-
-[node name="TextureRect3" type="TextureRect" parent="Game/GUI/Popups/Mooz/GridContainer"]
-layout_mode = 2
-texture = SubResource("PlaceholderTexture2D_wro7u")
-
 [node name="TextureRect4" type="TextureRect" parent="Game/GUI/Popups/Mooz/GridContainer"]
 layout_mode = 2
 texture = SubResource("ViewportTexture_w8nmi")
+
+[node name="TextureRect" type="TextureRect" parent="Game/GUI/Popups/Mooz/GridContainer"]
+layout_mode = 2
+texture = ExtResource("4_jsql7")
+
+[node name="TextureRect2" type="TextureRect" parent="Game/GUI/Popups/Mooz/GridContainer"]
+layout_mode = 2
+texture = ExtResource("5_ynk61")
+
+[node name="TextureRect3" type="TextureRect" parent="Game/GUI/Popups/Mooz/GridContainer"]
+layout_mode = 2
+texture = ExtResource("6_1fxbr")
 
 [node name="Bottom Bar Controls" type="Control" parent="Game/GUI/Popups/Mooz"]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -46.0
-offset_right = 789.0
-offset_bottom = 1.0
+offset_left = -410.5
+offset_top = 483.0
+offset_right = 378.5
+offset_bottom = 530.0
 grow_vertical = 0
 mouse_filter = 1
 
@@ -881,15 +1102,18 @@ offset_bottom = 21.8
 
 [node name="Minimize" type="Control" parent="Game/GUI/Popups/Mooz"]
 anchors_preset = 0
-offset_top = 489.0
-offset_right = 40.0
-offset_bottom = 529.0
+offset_left = 399.5
+offset_top = -34.0
+offset_right = 439.5
+offset_bottom = 6.0
 mouse_filter = 1
 
 [node name="BatteryLevel" type="Label" parent="Game/GUI/Popups/Mooz"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 247.0
+offset_top = 496.0
+offset_right = 287.0
+offset_bottom = 519.0
 
 [node name="Connection" type="Control" parent="Game/GUI/Popups"]
 visible = false
@@ -952,26 +1176,27 @@ offset_bottom = 267.5
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
-theme_override_styles/panel = SubResource("StyleBoxFlat_7e3fs")
+theme_override_styles/panel = SubResource("StyleBoxFlat_pauqq")
 script = ExtResource("5_ib0sg")
-sprite_options = [ExtResource("6_1egyw")]
+sprite_options = [ExtResource("11_srg04"), ExtResource("12_3t2n4"), ExtResource("13_enk21"), ExtResource("14_2vm85")]
 clutter_script = ExtResource("7_lfjdn")
 popups = NodePath("..")
 goal = NodePath("Charger")
 
 [node name="Charger" type="TextureRect" parent="Game/GUI/Popups/Drawer"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-texture = SubResource("PlaceholderTexture2D_riry4")
+offset_right = 254.0
+offset_bottom = 213.0
+texture = ExtResource("16_i6ier")
+expand_mode = 1
 
 [node name="Area2D" type="Area2D" parent="Game/GUI/Popups/Drawer/Charger" node_paths=PackedStringArray("drawer")]
 script = ExtResource("8_yl1n6")
 drawer = NodePath("../..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Game/GUI/Popups/Drawer/Charger/Area2D"]
-position = Vector2(21, 21)
-shape = SubResource("RectangleShape2D_iu5op")
+position = Vector2(129.5, 107.5)
+shape = SubResource("RectangleShape2D_xg774")
 
 [node name="DropZone" type="Control" parent="Game/GUI/Popups/Drawer"]
 layout_mode = 1
@@ -1047,7 +1272,7 @@ popups = NodePath("../../../../../GUI/Popups")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Game/WorldEnvironment/Facing Player/Desk/MeshInstance3D/LeftDHit"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14063, -0.0601349, -0.035923)
-shape = SubResource("BoxShape3D_v5m8l")
+shape = SubResource("BoxShape3D_2b368")
 
 [node name="LaptopHit" type="Area3D" parent="Game/WorldEnvironment/Facing Player/Desk/MeshInstance3D" node_paths=PackedStringArray("popups")]
 script = ExtResource("15_4khke")
@@ -1055,7 +1280,7 @@ popups = NodePath("../../../../../GUI/Popups")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Game/WorldEnvironment/Facing Player/Desk/MeshInstance3D/LaptopHit"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00698829, 0.105774, -0.0373688)
-shape = SubResource("BoxShape3D_ppeao")
+shape = SubResource("BoxShape3D_42xk8")
 
 [node name="RightDHit" type="Area3D" parent="Game/WorldEnvironment/Facing Player/Desk/MeshInstance3D" node_paths=PackedStringArray("popups")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.273239, 0, 2.38419e-07)
@@ -1064,20 +1289,40 @@ popups = NodePath("../../../../../GUI/Popups")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Game/WorldEnvironment/Facing Player/Desk/MeshInstance3D/RightDHit"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14063, -0.0601349, -0.035923)
-shape = SubResource("BoxShape3D_v5m8l")
-
-[node name="SubViewport" type="SubViewport" parent="Game/WorldEnvironment/Facing Player/Desk/MeshInstance3D"]
-size = Vector2i(384, 256)
-
-[node name="Camera3D" type="Camera3D" parent="Game/WorldEnvironment/Facing Player/Desk/MeshInstance3D/SubViewport"]
-transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -1.22829, -1.64573, -1.20544)
+shape = SubResource("BoxShape3D_2b368")
 
 [node name="Sprite3D" type="Sprite3D" parent="Game/WorldEnvironment/Facing Player/Desk"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00390625, -0.0425563, 0.320145)
 pixel_size = 0.0075
 shaded = true
-texture_filter = 0
-texture = ExtResource("16_87naj")
+alpha_scissor_threshold = 1.0
+alpha_hash_scale = 2.0
+alpha_antialiasing_mode = 2
+texture_filter = 2
+texture = ExtResource("25_i3ti3")
+
+[node name="Gato" type="Node3D" parent="Game/WorldEnvironment/Facing Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.415486, -1.87363, -0.356622)
+script = ExtResource("26_wsy4e")
+
+[node name="Sprite3D" type="Sprite3D" parent="Game/WorldEnvironment/Facing Player/Gato"]
+pixel_size = 0.0005
+texture = ExtResource("27_vofs7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Game/WorldEnvironment/Facing Player/Gato/Sprite3D"]
+libraries = {
+"": SubResource("AnimationLibrary_07wcv")
+}
+
+[node name="RayCast3D" type="RayCast3D" parent="Game/WorldEnvironment/Facing Player/Gato"]
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="Area3D" type="Area3D" parent="Game/WorldEnvironment/Facing Player/Gato"]
+script = ExtResource("29_0dpe8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Game/WorldEnvironment/Facing Player/Gato/Area3D"]
+shape = SubResource("BoxShape3D_ei6ph")
 
 [node name="plug" parent="Game/WorldEnvironment" instance=ExtResource("17_58bbx")]
 transform = Transform3D(-0.0229726, 0, -2.00833e-09, 0, 0.0229726, 0, 2.00833e-09, 0, -0.0229726, -1.05921, -1.88737, -1.62403)
