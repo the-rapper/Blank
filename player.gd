@@ -3,8 +3,9 @@ extends Node3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	Globals.can_interact = true
-	Globals.time_flowing = true
+	# Globals.can_interact = true
+	# Globals.time_flowing = true
+	pass
 	print(position)
 
 
