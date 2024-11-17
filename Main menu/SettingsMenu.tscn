@@ -1,31 +1,38 @@
-[gd_scene load_steps=2 format=3 uid="uid://coulnuorhm8d4"]
+[gd_scene load_steps=4 format=3 uid="uid://coulnuorhm8d4"]
 
+[ext_resource type="Texture2D" uid="uid://cfpbthmpfgjcn" path="res://Textures/Screenshot 2024-10-06 172323.png" id="1_3g25d"]
 [ext_resource type="FontFile" uid="uid://crgvfh325dcap" path="res://Fonts/Evil Empire/Evil Empire.otf" id="1_8mvlr"]
+[ext_resource type="Script" path="res://Main menu/MainMenu.gd" id="1_48mhc"]
 
 [node name="SettingsMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 0
+script = ExtResource("1_48mhc")
 
 [node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1919.0
+offset_bottom = 1079.0
+texture = ExtResource("1_3g25d")
+
+[node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 347.0
+offset_bottom = 231.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
-layout_mode = 2
-
-[node name="Settings" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
 [node name="SettingsContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
 [node name="VolumeSection" type="VBoxContainer" parent="MarginContainer/VBoxContainer/SettingsContainer"]
+visible = false
 layout_mode = 2
 
 [node name="Volume" type="Label" parent="MarginContainer/VBoxContainer/SettingsContainer/VolumeSection"]
@@ -41,6 +48,7 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="DisplaySection" type="VBoxContainer" parent="MarginContainer/VBoxContainer/SettingsContainer"]
+visible = false
 layout_mode = 2
 
 [node name="Display" type="Label" parent="MarginContainer/VBoxContainer/SettingsContainer/DisplaySection"]
@@ -49,18 +57,118 @@ layout_mode = 2
 [node name="FullscreenToggle" type="CheckButton" parent="MarginContainer/VBoxContainer/SettingsContainer/DisplaySection"]
 layout_mode = 2
 
-[node name="ControlsSection" type="VBoxContainer" parent="MarginContainer/VBoxContainer/SettingsContainer"]
-layout_mode = 2
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 961.0
+offset_right = 172.0
+offset_bottom = 1036.0
 
-[node name="Controls" type="Label" parent="MarginContainer/VBoxContainer/SettingsContainer/ControlsSection"]
+[node name="BackButton" type="Button" parent="MarginContainer2"]
 layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 0.124572, 0.0864943, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_8mvlr")
-theme_override_font_sizes/font_size = 65
+theme_override_font_sizes/font_size = 50
+action_mode = 0
+text = "<Back"
+icon_alignment = 1
+script = ExtResource("1_48mhc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 449.0
+offset_top = 666.0
+offset_right = 1517.0
+offset_bottom = 896.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+self_modulate = Color(1, 1, 1, 0.415686)
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+offset_left = 218.0
+offset_top = 136.0
+offset_right = 1728.0
+offset_bottom = 932.0
+size_flags_vertical = 3
+color = Color(0, 0, 0, 1)
+
+[node name="Controls" type="Label" parent="."]
+layout_mode = 2
+offset_left = 777.0
+offset_top = 177.0
+offset_right = 1124.0
+offset_bottom = 262.0
+theme_override_colors/font_color = Color(0.823529, 0.552941, 0.321569, 1)
+theme_override_fonts/font = ExtResource("1_8mvlr")
+theme_override_font_sizes/font_size = 80
 text = "Controls"
 horizontal_alignment = 1
 
-[node name="BackButton" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="ControlsSection" type="VBoxContainer" parent="Controls"]
 layout_mode = 2
+offset_left = -354.0
+offset_top = 107.0
+offset_right = 714.0
+offset_bottom = 369.0
+theme_override_constants/separation = 20
+
+[node name="Mouse" type="Label" parent="Controls/ControlsSection"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_8mvlr")
+theme_override_font_sizes/font_size = 70
+text = "\"Use arrow keys to look around\""
+horizontal_alignment = 1
+
+[node name="Click" type="Label" parent="Controls/ControlsSection"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_8mvlr")
+theme_override_font_sizes/font_size = 70
+text = "\"Click on things to interact\""
+horizontal_alignment = 1
+
+[node name="Exit zoom meeting" type="Label" parent="Controls/ControlsSection"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_8mvlr")
+theme_override_font_sizes/font_size = 70
+text = "\"Press \"E\" to exit mooz meeting\""
+horizontal_alignment = 1
+
+[node name="Esc" type="Label" parent="Controls/ControlsSection"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_8mvlr")
+theme_override_font_sizes/font_size = 70
+text = "\"Use escape key to back out and pause\""
+horizontal_alignment = 1
+
+[node name="Objective_" type="Label" parent="."]
+offset_left = 252.0
+offset_top = 792.0
+offset_right = 599.0
+offset_bottom = 861.0
+theme_override_colors/font_color = Color(0.821888, 0.553521, 0.320329, 1)
+theme_override_fonts/font = ExtResource("1_8mvlr")
+theme_override_font_sizes/font_size = 65
+text = "Objective:
+"
+horizontal_alignment = 1
+
+[node name="ControlsSection" type="VBoxContainer" parent="Objective_"]
+layout_mode = 2
+offset_left = 392.0
+offset_top = -62.0
+offset_right = 1460.0
+offset_bottom = 169.0
+theme_override_constants/separation = 20
+
+[node name="Mouse" type="Label" parent="Objective_/ControlsSection"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_8mvlr")
+theme_override_font_sizes/font_size = 70
+text = "Avoid the distractions and stay connected as long as possible"
+horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-root_node = NodePath("../MarginContainer/VBoxContainer/SettingsContainer")
+
+[connection signal="pressed" from="MarginContainer2/BackButton" to="." method="_on_back_button_pressed"]

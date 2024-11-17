@@ -319,7 +319,7 @@ mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("1_b8pcp")
 theme_override_font_sizes/font_size = 65
 theme_override_styles/hover = SubResource("StyleBoxFlat_cuqw3")
-text = "Settings"
+text = "How to Play"
 script = ExtResource("2_lryuh")
 
 [node name="QuitButton" type="Button" parent="MarginContainer/MenuItems"]

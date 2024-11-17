@@ -43,6 +43,7 @@ func _ready():
 		quit_button.mouse_entered.connect(func(): _on_button_hover(quit_button))
 		quit_button.mouse_exited.connect(func(): _on_button_normal(quit_button))
 
+	
 func _on_button_hover(button: Button):
 	print("Button hover")
 	var tween = create_tween()
@@ -61,7 +62,9 @@ func _on_start_pressed():
 
 func _on_settings_pressed():
 	print("Settings pressed!")
-	transition_to_scene("res://scenes/settings.tscn")
+	animation_player.play("fade_to_black")
+	await animation_player.animation_finished
+	transition_to_scene("res://Main menu/SettingsMenu.tscn")
 
 func _on_quit_pressed():
 	print("Quit pressed!")
@@ -74,3 +77,7 @@ func transition_to_scene(next_scene: String):
 	animation_player.play("fade_to_black")
 	await animation_player.animation_finished
 	get_tree().change_scene_to_file(next_scene)
+
+
+func _on_back_button_pressed() -> void:
+	pass # Replace with function body.

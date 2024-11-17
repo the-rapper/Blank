@@ -117,27 +117,63 @@ text = "I do it all the time"
 [node name="Question5" type="VBoxContainer" parent="MarginContainer/VBoxContainer/QuestionContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/QuestionContainer/Question5"]
+[node name="Job" type="Label" parent="MarginContainer/VBoxContainer/QuestionContainer/Question5"]
 layout_mode = 2
+text = "Do you have a job?"
 
 [node name="OptionButtons" type="HBoxContainer" parent="MarginContainer/VBoxContainer/QuestionContainer/Question5"]
 layout_mode = 2
 
+[node name="Yes" type="CheckBox" parent="MarginContainer/VBoxContainer/QuestionContainer/Question5/OptionButtons"]
+layout_mode = 2
+text = "Yes"
+
+[node name="No" type="CheckBox" parent="MarginContainer/VBoxContainer/QuestionContainer/Question5/OptionButtons"]
+layout_mode = 2
+text = "No"
+
 [node name="Question6" type="VBoxContainer" parent="MarginContainer/VBoxContainer/QuestionContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/QuestionContainer/Question6"]
+[node name="Partner" type="Label" parent="MarginContainer/VBoxContainer/QuestionContainer/Question6"]
 layout_mode = 2
+text = "Do you have a partner?"
 
 [node name="OptionButtons" type="HBoxContainer" parent="MarginContainer/VBoxContainer/QuestionContainer/Question6"]
 layout_mode = 2
+
+[node name="Yes" type="CheckBox" parent="MarginContainer/VBoxContainer/QuestionContainer/Question6/OptionButtons"]
+layout_mode = 2
+text = "Yes"
+
+[node name="No" type="CheckBox" parent="MarginContainer/VBoxContainer/QuestionContainer/Question6/OptionButtons"]
+layout_mode = 2
+text = "No"
+
+[node name="Question7" type="VBoxContainer" parent="MarginContainer/VBoxContainer/QuestionContainer"]
+layout_mode = 2
+
+[node name="Clowns?" type="Label" parent="MarginContainer/VBoxContainer/QuestionContainer/Question7"]
+layout_mode = 2
+text = "Do you have a Fear of clowns?"
+
+[node name="OptionButtons" type="HBoxContainer" parent="MarginContainer/VBoxContainer/QuestionContainer/Question7"]
+layout_mode = 2
+
+[node name="Yes" type="CheckBox" parent="MarginContainer/VBoxContainer/QuestionContainer/Question7/OptionButtons"]
+layout_mode = 2
+text = "Yes"
+
+[node name="No" type="CheckBox" parent="MarginContainer/VBoxContainer/QuestionContainer/Question7/OptionButtons"]
+layout_mode = 2
+text = "No"
 
 [node name="ButtonContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
 [node name="Start Game" type="Button" parent="MarginContainer/VBoxContainer/ButtonContainer"]
 layout_mode = 2
-text = "Start Game"
+text = "Start meeting"
 
 [node name="Randomize" type="Button" parent="MarginContainer/VBoxContainer/ButtonContainer"]
 layout_mode = 2
