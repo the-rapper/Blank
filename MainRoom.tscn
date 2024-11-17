@@ -1,4 +1,4 @@
-[gd_scene load_steps=81 format=3 uid="uid://vfdq1cvm2jxp"]
+[gd_scene load_steps=81 format=3 uid="uid://b3w0u2fyyrpnc"]
 
 [ext_resource type="Script" path="res://pop.gd" id="1_2o84w"]
 [ext_resource type="Script" path="res://mooz.gd" id="2_auvs0"]
@@ -138,7 +138,7 @@ corner_radius_bottom_left = 20
 [sub_resource type="SystemFont" id="SystemFont_u8kui"]
 font_names = PackedStringArray("Segoe UI Variable Small")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_w8nmi"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_dfqvn"]
 viewport_path = NodePath("Game/WorldEnvironment/Facing Player/Desk/MeshInstance3D/SubViewport")
 
 [sub_resource type="SystemFont" id="SystemFont_3ta5h"]
@@ -944,7 +944,7 @@ columns = 2
 
 [node name="TextureRect4" type="TextureRect" parent="Game/GUI/Popups/Mooz/GridContainer"]
 layout_mode = 2
-texture = SubResource("ViewportTexture_w8nmi")
+texture = ExtResource("6_1fxbr")
 
 [node name="TextureRect" type="TextureRect" parent="Game/GUI/Popups/Mooz/GridContainer"]
 layout_mode = 2
@@ -956,7 +956,7 @@ texture = ExtResource("5_ynk61")
 
 [node name="TextureRect3" type="TextureRect" parent="Game/GUI/Popups/Mooz/GridContainer"]
 layout_mode = 2
-texture = ExtResource("6_1fxbr")
+texture = SubResource("ViewportTexture_dfqvn")
 
 [node name="Bottom Bar Controls" type="Control" parent="Game/GUI/Popups/Mooz"]
 layout_mode = 1
@@ -1290,6 +1290,12 @@ popups = NodePath("../../../../../GUI/Popups")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Game/WorldEnvironment/Facing Player/Desk/MeshInstance3D/RightDHit"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14063, -0.0601349, -0.035923)
 shape = SubResource("BoxShape3D_2b368")
+
+[node name="SubViewport" type="SubViewport" parent="Game/WorldEnvironment/Facing Player/Desk/MeshInstance3D"]
+size = Vector2i(384, 256)
+
+[node name="Camera3D" type="Camera3D" parent="Game/WorldEnvironment/Facing Player/Desk/MeshInstance3D/SubViewport"]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -1.22994, -1.666, -1.22399)
 
 [node name="Sprite3D" type="Sprite3D" parent="Game/WorldEnvironment/Facing Player/Desk"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00390625, -0.0425563, 0.320145)
