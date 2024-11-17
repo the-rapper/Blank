@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=3 uid="uid://vn45hbpedsc7"]
+[gd_scene load_steps=65 format=3 uid="uid://vn45hbpedsc7"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_1nw3k"]
 [ext_resource type="Texture2D" uid="uid://dj50dl1plwird" path="res://Images/desk_1.png" id="1_pp4dt"]
@@ -16,6 +16,7 @@
 [ext_resource type="Script" path="res://texture_button.gd" id="5_iopol"]
 [ext_resource type="Script" path="res://drawer_collect.gd" id="5_oj3cc"]
 [ext_resource type="Script" path="res://drop_zone.gd" id="6_02ucm"]
+[ext_resource type="Script" path="res://bar.gd" id="6_8mnmk"]
 [ext_resource type="Script" path="res://laptop_hit.gd" id="6_22x0x"]
 [ext_resource type="Texture2D" uid="uid://do8b3knaduioa" path="res://Images/door_closed.png.png" id="8_pgof8"]
 [ext_resource type="Script" path="res://game_logic_container.gd" id="10_fjovq"]
@@ -867,7 +868,6 @@ offset_right = 513.0
 offset_bottom = -343.5
 
 [node name="Connection" type="Control" parent="Game/GUI/Popups"]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -902,6 +902,7 @@ offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_we8g2")
+script = ExtResource("6_8mnmk")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Connection/Panel"]
 layout_mode = 0

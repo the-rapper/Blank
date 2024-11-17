@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://2ijwsn62qxyn"
+path="res://.godot/imported/Voice-002.ogg-d7631feb551db29a08917f0d169cbce3.oggvorbisstr"
+
+[deps]
+
+source_file="res://Random zoom noises/Voice-002.ogg"
+dest_files=["res://.godot/imported/Voice-002.ogg-d7631feb551db29a08917f0d169cbce3.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

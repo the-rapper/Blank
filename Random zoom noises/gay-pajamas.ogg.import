@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dxy8m8uf2rnlh"
+path="res://.godot/imported/gay-pajamas.ogg-649871c8227d6926d7d96894859ccfdd.oggvorbisstr"
+
+[deps]
+
+source_file="res://Random zoom noises/gay-pajamas.ogg"
+dest_files=["res://.godot/imported/gay-pajamas.ogg-649871c8227d6926d7d96894859ccfdd.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
