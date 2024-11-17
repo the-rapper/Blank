@@ -25,7 +25,7 @@
 [ext_resource type="Script" path="res://drawer_hit.gd" id="16_vymy5"]
 [ext_resource type="Script" path="res://laptop_hit.gd" id="17_iqss2"]
 [ext_resource type="PackedScene" uid="uid://cj2uveebx7lyw" path="res://Models/plug.glb" id="19_hp26x"]
-[ext_resource type="Texture2D" uid="uid://jr4qusqvookj" path="res://Images/nyan-cat-sparkles_Still Photo.png" id="19_v84gx"]
+[ext_resource type="Texture2D" uid="uid://fts6h7oxvrcy" path="res://Images/nyan-cat-sparkles_Still Photo.png" id="19_v84gx"]
 [ext_resource type="Texture2D" uid="uid://do8b3knaduioa" path="res://Images/door_closed.png.png" id="20_lvw3c"]
 [ext_resource type="Script" path="res://pet_game.gd" id="20_v64bf"]
 [ext_resource type="Texture2D" uid="uid://hv26iii0evlv" path="res://Images/DadSS.png" id="21_k7skt"]
@@ -35,7 +35,7 @@
 [ext_resource type="Texture2D" uid="uid://c7npt85cm83ls" path="res://Images/Updated Desk.png" id="24_p7csr"]
 [ext_resource type="Script" path="res://game_logic_container.gd" id="25_0ktki"]
 [ext_resource type="Script" path="res://gato.gd" id="28_6n6ag"]
-[ext_resource type="Texture2D" uid="uid://dhmyphhodwj5c" path="res://Images/nyan-cat-sparkles_Spritesheet.png" id="28_7uk4n"]
+[ext_resource type="Texture2D" uid="uid://ck27da8a3fq7e" path="res://Images/nyan-cat-sparkles_Spritesheet.png" id="28_7uk4n"]
 [ext_resource type="Script" path="res://collide_gato.gd" id="30_vro80"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_akgym"]
@@ -200,6 +200,81 @@ size = Vector3(0.193485, 0.172363, 0.131126)
 [sub_resource type="BoxShape3D" id="BoxShape3D_ppeao"]
 size = Vector3(0.527893, 0.115936, 0.126556)
 
+[sub_resource type="Animation" id="Animation_cwkd4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("19_v84gx")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:pixel_size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0005]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:offset")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_3ygsu"]
 resource_name = "gato"
 length = 0.001
@@ -327,81 +402,6 @@ tracks/5/keys = {
 "transitions": PackedFloat32Array(),
 "update": 0,
 "values": []
-}
-
-[sub_resource type="Animation" id="Animation_cwkd4"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("19_v84gx")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:hframes")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:vframes")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath(".:frame")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath(".:pixel_size")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0005]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath(".:offset")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_07wcv"]
