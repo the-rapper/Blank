@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://b3w0u2fyyrpnc"]
+[gd_scene load_steps=67 format=3 uid="uid://vn45hbpedsc7"]
 
 [ext_resource type="Script" path="res://pop.gd" id="1_2o84w"]
 [ext_resource type="Script" path="res://mooz.gd" id="2_auvs0"]
@@ -892,6 +892,11 @@ offset_top = 489.0
 offset_right = 40.0
 offset_bottom = 529.0
 mouse_filter = 1
+
+[node name="BatteryLevel" type="Label" parent="Game/GUI/Popups/Mooz"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
 
 [node name="Connection" type="Control" parent="Game/GUI/Popups"]
 visible = false
