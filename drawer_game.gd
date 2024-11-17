@@ -1,7 +1,7 @@
 extends Panel
 
-@onready var w = size.x
-@onready var h = size.y
+@onready var w = size.x * 0.66
+@onready var h = size.y * 0.66
 @export var sprite_options = []
 @export var n = 15
 @export var clutter_script : Script

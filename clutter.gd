@@ -9,7 +9,7 @@ func _get_drag_data(at_position: Vector2) -> Variant:
 	# print("dragged")
 	var preview = self.duplicate()
 	self.hide()
-	preview.modulate.a =1 
+	#preview.modulate.a =1 
 	self.mouse_filter = Control.MOUSE_FILTER_STOP
 	set_drag_preview(preview)
 	return self
