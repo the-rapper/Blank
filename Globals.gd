@@ -40,8 +40,9 @@ func _process(delta: float) -> void:
 		call_time += delta
 		if laptop_is_charging:
 			battery_level += delta
-		else:
+		else: # battery level has two states: charging and discharging
 			battery_level -= delta
+			# battery death condition
 			if battery_level < 4:
 				participation = -999
 				get_tree().change_scene_to_file("res://DisconnectScreen.tscn")
@@ -54,7 +55,18 @@ func turn_camera_on() -> void:
 	if is_mic_on:
 		is_participating = true
 
+func turn_camera_off() -> void:
+	is_camera_on = false
+
+# simple functions
+# premice is a little more complicated:
+# you have to connect both your mic and your video
+# in order to collect participation
+# otherwise you won't lose participation but you won't gain it either
 func turn_mic_on() -> void:
 	is_mic_on = true
 	if is_camera_on:
 		is_participating = true
+
+func turn_mic_off() -> void:
+	is_mic_on = false
