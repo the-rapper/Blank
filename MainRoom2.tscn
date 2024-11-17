@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=3 uid="uid://cj30t6dtphr2b"]
+[gd_scene load_steps=81 format=3 uid="uid://cj30t6dtphr2b"]
 
 [ext_resource type="Script" path="res://pop.gd" id="1_j8x0c"]
 [ext_resource type="Script" path="res://mooz.gd" id="2_rjtnp"]
@@ -21,16 +21,22 @@
 [ext_resource type="Script" path="res://player.gd" id="13_vdi0v"]
 [ext_resource type="Script" path="res://click.gd" id="14_k3k1c"]
 [ext_resource type="Script" path="res://facing_player.gd" id="15_54tlp"]
+[ext_resource type="Texture2D" uid="uid://ddv3my05tsokx" path="res://Images/Charger.png" id="16_ma0b3"]
 [ext_resource type="Script" path="res://drawer_hit.gd" id="16_vymy5"]
 [ext_resource type="Script" path="res://laptop_hit.gd" id="17_iqss2"]
 [ext_resource type="PackedScene" uid="uid://cj2uveebx7lyw" path="res://Models/plug.glb" id="19_hp26x"]
+[ext_resource type="Texture2D" uid="uid://jr4qusqvookj" path="res://Images/nyan-cat-sparkles_Still Photo.png" id="19_v84gx"]
 [ext_resource type="Texture2D" uid="uid://do8b3knaduioa" path="res://Images/door_closed.png.png" id="20_lvw3c"]
+[ext_resource type="Script" path="res://pet_game.gd" id="20_v64bf"]
 [ext_resource type="Texture2D" uid="uid://hv26iii0evlv" path="res://Images/DadSS.png" id="21_k7skt"]
 [ext_resource type="Script" path="res://dad.gd" id="22_ge2hv"]
 [ext_resource type="Script" path="res://rustle_dad.gd" id="23_2jd6y"]
 [ext_resource type="Texture2D" uid="uid://dnv126b4qn0r0" path="res://Images/Cat_Poster_2.png" id="24_jn0um"]
 [ext_resource type="Texture2D" uid="uid://c7npt85cm83ls" path="res://Images/Updated Desk.png" id="24_p7csr"]
 [ext_resource type="Script" path="res://game_logic_container.gd" id="25_0ktki"]
+[ext_resource type="Script" path="res://gato.gd" id="28_6n6ag"]
+[ext_resource type="Texture2D" uid="uid://dhmyphhodwj5c" path="res://Images/nyan-cat-sparkles_Spritesheet.png" id="28_7uk4n"]
+[ext_resource type="Script" path="res://collide_gato.gd" id="30_vro80"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_akgym"]
 bg_color = Color(0.0666667, 0.0627451, 0.0666667, 0.643137)
@@ -178,10 +184,8 @@ variation_opentype = {
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7e3fs"]
 bg_color = Color(0.0671954, 0.0716912, 0.0933782, 1)
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_riry4"]
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iu5op"]
-size = Vector2(42, 43)
+size = Vector2(135, 93)
 
 [sub_resource type="Environment" id="Environment_robs0"]
 
@@ -195,6 +199,220 @@ size = Vector3(0.193485, 0.172363, 0.131126)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ppeao"]
 size = Vector3(0.527893, 0.115936, 0.126556)
+
+[sub_resource type="Animation" id="Animation_3ygsu"]
+resource_name = "gato"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("19_v84gx")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.0001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, 1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:pixel_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0005]
+}
+
+[sub_resource type="Animation" id="Animation_cowf3"]
+resource_name = "run"
+length = 0.55
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("28_7uk4n")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.0666667, 0.133333, 0.2, 0.266667, 0.3, 0.333333, 0.383333, 0.466667, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 3, 4, 5, 6, 7, 9, 9, 11]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:pixel_size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0008]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:offset")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
+[sub_resource type="Animation" id="Animation_cwkd4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("19_v84gx")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:pixel_size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0005]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:offset")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_07wcv"]
+_data = {
+"RESET": SubResource("Animation_cwkd4"),
+"gato": SubResource("Animation_3ygsu"),
+"run": SubResource("Animation_cowf3")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2q152"]
+size = Vector3(0.393555, 0.221313, 0.143127)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kelnh"]
 size = Vector3(2.42432, 3.25055, 1.70605)
@@ -280,6 +498,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_akgym")
 script = ExtResource("1_j8x0c")
 
 [node name="Mooz" type="Panel" parent="Game/GUI/Popups" node_paths=PackedStringArray("popups")]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -935,7 +1154,6 @@ theme_override_fonts/normal_font = SubResource("FontVariation_8a8cc")
 text = "Connection"
 
 [node name="Drawer" type="Panel" parent="Game/GUI/Popups" node_paths=PackedStringArray("popups", "goal")]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -958,16 +1176,17 @@ goal = NodePath("Charger")
 
 [node name="Charger" type="TextureRect" parent="Game/GUI/Popups/Drawer"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-texture = SubResource("PlaceholderTexture2D_riry4")
+offset_right = 254.0
+offset_bottom = 213.0
+texture = ExtResource("16_ma0b3")
+expand_mode = 1
 
 [node name="Area2D" type="Area2D" parent="Game/GUI/Popups/Drawer/Charger" node_paths=PackedStringArray("drawer")]
 script = ExtResource("10_2flms")
 drawer = NodePath("../..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Game/GUI/Popups/Drawer/Charger/Area2D"]
-position = Vector2(21, 21)
+position = Vector2(129.5, 107.5)
 shape = SubResource("RectangleShape2D_iu5op")
 
 [node name="DropZone" type="Control" parent="Game/GUI/Popups/Drawer"]
@@ -979,6 +1198,52 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("11_b1sth")
+
+[node name="Petting" type="Panel" parent="Game/GUI/Popups" node_paths=PackedStringArray("popups", "goal")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -488.0
+offset_top = -267.5
+offset_right = 488.0
+offset_bottom = 267.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_7e3fs")
+script = ExtResource("7_6u8ue")
+sprite_options = [ExtResource("8_5wrev"), ExtResource("9_0hciv"), ExtResource("10_0o0t8"), ExtResource("11_bdpdi")]
+clutter_script = ExtResource("9_uof7s")
+popups = NodePath("..")
+goal = NodePath("Pet")
+
+[node name="Pet" type="TextureRect" parent="Game/GUI/Popups/Petting"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -191.0
+offset_top = -106.5
+offset_right = -56.0
+offset_bottom = -14.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("19_v84gx")
+expand_mode = 1
+script = ExtResource("20_v64bf")
+
+[node name="Area2D" type="Area2D" parent="Game/GUI/Popups/Petting/Pet" node_paths=PackedStringArray("drawer")]
+script = ExtResource("10_2flms")
+drawer = NodePath("../..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Game/GUI/Popups/Petting/Pet/Area2D"]
+position = Vector2(67.5, 46)
+shape = SubResource("RectangleShape2D_iu5op")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Game"]
 environment = SubResource("Environment_robs0")
@@ -1072,6 +1337,27 @@ alpha_hash_scale = 2.0
 alpha_antialiasing_mode = 2
 texture_filter = 2
 texture = ExtResource("24_p7csr")
+
+[node name="Gato" type="Node3D" parent="Game/WorldEnvironment/Facing Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.80683, 0)
+script = ExtResource("28_6n6ag")
+
+[node name="Sprite3D" type="Sprite3D" parent="Game/WorldEnvironment/Facing Player/Gato"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.636944, -0.116559, 0)
+pixel_size = 0.0005
+texture = ExtResource("19_v84gx")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Game/WorldEnvironment/Facing Player/Gato/Sprite3D"]
+libraries = {
+"": SubResource("AnimationLibrary_07wcv")
+}
+
+[node name="Area3D" type="Area3D" parent="Game/WorldEnvironment/Facing Player/Gato"]
+script = ExtResource("30_vro80")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Game/WorldEnvironment/Facing Player/Gato/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.584899, -0.079895, -0.019928)
+shape = SubResource("BoxShape3D_2q152")
 
 [node name="plug" parent="Game/WorldEnvironment" instance=ExtResource("19_hp26x")]
 transform = Transform3D(-0.0229726, 0, -2.00833e-09, 0, 0.0229726, 0, 2.00833e-09, 0, -0.0229726, -1.05921, -1.88737, -1.62403)

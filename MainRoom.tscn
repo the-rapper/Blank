@@ -1,13 +1,13 @@
-[gd_scene load_steps=67 format=3 uid="uid://b3w0u2fyyrpnc"]
+[gd_scene load_steps=67 format=3 uid="uid://vfdq1cvm2jxp"]
 
 [ext_resource type="Script" path="res://pop.gd" id="1_2o84w"]
 [ext_resource type="Script" path="res://mooz.gd" id="2_auvs0"]
 [ext_resource type="Texture2D" uid="uid://bg5jnvdbjj57h" path="res://Images/Unmute.png" id="3_74ipc"]
-[ext_resource type="Texture2D" uid="uid://xp8tsbhjc2yh" path="res://Images/mooz logo.png" id="3_iuewn"]
 [ext_resource type="Texture2D" uid="uid://dl6fdnv6uelfw" path="res://Images/On Video.png" id="4_xwt4s"]
 [ext_resource type="Script" path="res://drawer_game.gd" id="5_ib0sg"]
 [ext_resource type="Script" path="res://call_time.gd" id="5_nl5wc"]
 [ext_resource type="Texture2D" uid="uid://cjq6luovhblhy" path="res://icon.svg" id="6_1egyw"]
+[ext_resource type="Texture2D" uid="uid://hve0bqb6w3l" path="res://Images/minimize button.png" id="6_f0ryp"]
 [ext_resource type="Script" path="res://clutter.gd" id="7_lfjdn"]
 [ext_resource type="Script" path="res://MinBut.gd" id="7_u4cs0"]
 [ext_resource type="Script" path="res://drawer_collect.gd" id="8_yl1n6"]
@@ -255,7 +255,7 @@ _data = {
 [sub_resource type="BoxShape3D" id="BoxShape3D_losis"]
 size = Vector3(0.30249, 0.446289, 0.142578)
 
-[node name="Root2" type="Node3D"]
+[node name="Root3" type="Node3D"]
 
 [node name="Game" type="Node" parent="."]
 
@@ -297,19 +297,18 @@ popups = NodePath("..")
 
 [node name="TextureRect" type="TextureRect" parent="Game/GUI/Popups/Mooz"]
 layout_mode = 0
-offset_left = 347.0
-offset_top = -16.5
-offset_right = 445.0
-offset_bottom = 71.5
-texture = ExtResource("3_iuewn")
-expand_mode = 1
+offset_left = 700.0
+offset_top = 4.5
+offset_right = 766.0
+offset_bottom = 52.5
+texture = ExtResource("6_f0ryp")
 
 [node name="Area2D" type="Area2D" parent="Game/GUI/Popups/Mooz/TextureRect" node_paths=PackedStringArray("mooz")]
 script = ExtResource("7_u4cs0")
 mooz = NodePath("../..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Game/GUI/Popups/Mooz/TextureRect/Area2D"]
-position = Vector2(-1332, 122)
+position = Vector2(-547, 93.5)
 shape = SubResource("RectangleShape2D_5p5sj")
 
 [node name="RightBar" type="Panel" parent="Game/GUI/Popups/Mooz"]
@@ -893,11 +892,6 @@ offset_top = 489.0
 offset_right = 40.0
 offset_bottom = 529.0
 mouse_filter = 1
-
-[node name="BatteryLevel" type="Label" parent="Game/GUI/Popups/Mooz"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
 
 [node name="Connection" type="Control" parent="Game/GUI/Popups"]
 visible = false
