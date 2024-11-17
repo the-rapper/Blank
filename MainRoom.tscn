@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://vn45hbpedsc7"]
+[gd_scene load_steps=69 format=3 uid="uid://b3w0u2fyyrpnc"]
 
 [ext_resource type="Script" path="res://pop.gd" id="1_2o84w"]
 [ext_resource type="Script" path="res://mooz.gd" id="2_auvs0"]
@@ -133,6 +133,9 @@ font_names = PackedStringArray("Segoe UI Variable Small")
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_wro7u"]
 size = Vector2(365, 200)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_w8nmi"]
+viewport_path = NodePath("Game/WorldEnvironment/Facing Player/Desk/MeshInstance3D/SubViewport")
 
 [sub_resource type="SystemFont" id="SystemFont_3ta5h"]
 font_names = PackedStringArray("Segoe UI")
@@ -744,7 +747,7 @@ texture = SubResource("PlaceholderTexture2D_wro7u")
 
 [node name="TextureRect4" type="TextureRect" parent="Game/GUI/Popups/Mooz/GridContainer"]
 layout_mode = 2
-texture = SubResource("PlaceholderTexture2D_wro7u")
+texture = SubResource("ViewportTexture_w8nmi")
 
 [node name="Bottom Bar Controls" type="Control" parent="Game/GUI/Popups/Mooz"]
 layout_mode = 1
@@ -1073,6 +1076,11 @@ popups = NodePath("../../../../../GUI/Popups")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Game/WorldEnvironment/Facing Player/Desk/MeshInstance3D/RightDHit"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14063, -0.0601349, -0.035923)
 shape = SubResource("BoxShape3D_v5m8l")
+
+[node name="SubViewport" type="SubViewport" parent="Game/WorldEnvironment/Facing Player/Desk/MeshInstance3D"]
+
+[node name="Camera3D" type="Camera3D" parent="Game/WorldEnvironment/Facing Player/Desk/MeshInstance3D/SubViewport"]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -1.22829, -1.64573, -1.20544)
 
 [node name="Sprite3D" type="Sprite3D" parent="Game/WorldEnvironment/Facing Player/Desk"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00390625, -0.0425563, 0.320145)
