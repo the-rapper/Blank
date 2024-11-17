@@ -21,22 +21,22 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	# add or subtract participation
-	if is_participating:
-		since_participated = 0
-		if is_camera_on and is_mic_on:
-			participation += delta
-			if participation > 100:
-				participation = 100
-	else:
-		since_participated += delta
-		if since_participated > 10:
-			participation -= delta
-			if participation < 0:
-				participation = -999
-				get_tree().change_scene_to_file("res://DisconnectScreen.tscn")
-	# call time tracker
 	if time_flowing:
+			# add or subtract participation
+		if is_participating:
+			since_participated = 0
+			if is_camera_on and is_mic_on:
+				participation += delta
+				if participation > 100:
+					participation = 100
+		else:
+			since_participated += delta
+			if since_participated > 10:
+				participation -= delta
+				if participation < 0:
+					participation = -999
+					get_tree().change_scene_to_file("res://DisconnectScreen.tscn")
+		# call time tracker
 		call_time += delta
 		if laptop_is_charging:
 			battery_level += delta

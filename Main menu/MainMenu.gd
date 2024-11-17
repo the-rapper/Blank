@@ -63,9 +63,10 @@ func _on_start_pressed():
 
 func _on_settings_pressed():
 	print("Settings pressed!")
-	animation_player.play("fade_to_black")
-	await animation_player.animation_finished
+	# animation_player.play("fade_to_black")
+	# await animation_player.animation_finished
 	transition_to_scene("res://Main menu/SettingsMenu.tscn")
+
 
 func _on_quit_pressed():
 	print("Quit pressed!")
@@ -76,9 +77,11 @@ func _on_quit_pressed():
 func transition_to_scene(next_scene: String):
 	print("Trying to transition to: ", next_scene)
 	animation_player.play("fade_to_black")
-	await animation_player.animation_finished
+	# await animation_player.animation_finished
+	print("Animation played")
 	get_tree().change_scene_to_file(next_scene)
 
 
 func _on_back_button_pressed() -> void:
-	pass # Replace with function body.
+	print("Back button pressed")
+	transition_to_scene("res://Main menu/MainMenu.tscn")
