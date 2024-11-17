@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cvdvahwduqg04"
+path="res://.godot/imported/ghost.ogg-b1c74269fc2081ab6b1c09a680f8fb28.oggvorbisstr"
+
+[deps]
+
+source_file="res://Random zoom noises/ghost.ogg"
+dest_files=["res://.godot/imported/ghost.ogg-b1c74269fc2081ab6b1c09a680f8fb28.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

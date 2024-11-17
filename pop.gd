@@ -5,13 +5,16 @@ extends Panel
 	"mooz": get_node("Mooz"),
 	"drawer": get_node("Drawer")
 	}
+@onready var audio = get_node("AudioStreamPlayer")
 var chosen = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	audio.loop = true
 	hide()
 	for child in get_children():
-		child.hide()
+		if child is not AudioStreamPlayer:
+			child.hide()
 	pass # Replace with function body.
 
 
@@ -24,6 +27,8 @@ func exit():
 	hide()
 	connection_bar.hide()
 	if chosen != null:
+		if chosen.name == "Mooz":
+			audio.playing = false
 		chosen.hide()
 	chosen = null
 	Globals.can_interact = true
@@ -32,6 +37,8 @@ func pop_up(option: String):
 	chosen = options.get(option)
 	chosen.show()
 	connection_bar.show()
+	if option == "mooz":
+		audio.playing = true
 	if(chosen.has_method("begin")):
 		Globals.can_interact = false
 		chosen.begin()

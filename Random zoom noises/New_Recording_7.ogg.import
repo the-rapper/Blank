@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dtv6xuj4kdvil"
+path="res://.godot/imported/New_Recording_7.ogg-9d1081e116c6e357d3268f6e47418cab.oggvorbisstr"
+
+[deps]
+
+source_file="res://Random zoom noises/New_Recording_7.ogg"
+dest_files=["res://.godot/imported/New_Recording_7.ogg-9d1081e116c6e357d3268f6e47418cab.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

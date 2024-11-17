@@ -1,15 +1,25 @@
-[gd_scene load_steps=62 format=3 uid="uid://20i3eii7jcdj"]
+[gd_scene load_steps=73 format=3 uid="uid://20i3eii7jcdj"]
 
 [ext_resource type="Script" path="res://pop.gd" id="1_0hodx"]
 [ext_resource type="Texture2D" uid="uid://bg5jnvdbjj57h" path="res://Images/Unmute.png" id="2_l5gyf"]
+[ext_resource type="AudioStream" uid="uid://cvdvahwduqg04" path="res://Random zoom noises/ghost.ogg" id="2_tiksp"]
 [ext_resource type="Texture2D" uid="uid://dl6fdnv6uelfw" path="res://Images/On Video.png" id="3_1d485"]
+[ext_resource type="AudioStream" uid="uid://dqych4n6dgs0p" path="res://Random zoom noises/New_Recording.ogg" id="3_qcypk"]
+[ext_resource type="AudioStream" uid="uid://dvruylmkc8mba" path="res://Random zoom noises/New_Recording_2.ogg" id="4_3y4en"]
 [ext_resource type="Script" path="res://drawer_game.gd" id="4_pa34k"]
+[ext_resource type="AudioStream" uid="uid://b7lyofwtffuoo" path="res://Random zoom noises/New_Recording_3.ogg" id="5_jyos2"]
 [ext_resource type="Texture2D" uid="uid://cjq6luovhblhy" path="res://icon.svg" id="5_kykbr"]
 [ext_resource type="Script" path="res://clutter.gd" id="6_3axfd"]
+[ext_resource type="AudioStream" uid="uid://ck8mgurlagv8f" path="res://Random zoom noises/New_Recording_4.ogg" id="6_rkbwu"]
 [ext_resource type="Script" path="res://drawer_collect.gd" id="7_efvjf"]
+[ext_resource type="AudioStream" uid="uid://bqdcre3jxxm3g" path="res://Random zoom noises/New_Recording_5.ogg" id="7_nfxei"]
 [ext_resource type="Script" path="res://drop_zone.gd" id="8_70hm0"]
+[ext_resource type="AudioStream" uid="uid://b5v7wwhlj0x1o" path="res://Random zoom noises/New_Recording_6.ogg" id="8_nhyr0"]
 [ext_resource type="Texture2D" uid="uid://dlw5t28ktlt7n" path="res://Textures/99f3b05e659e42acb1f79e24b8f86809.webp" id="9_8xi0a"]
+[ext_resource type="AudioStream" uid="uid://dtv6xuj4kdvil" path="res://Random zoom noises/New_Recording_7.ogg" id="9_n8lc8"]
+[ext_resource type="AudioStream" uid="uid://cjfytvvf7k3d" path="res://Random zoom noises/New_Recording_8.ogg" id="10_7r4lf"]
 [ext_resource type="Script" path="res://player.gd" id="10_e72rt"]
+[ext_resource type="AudioStream" uid="uid://di6rsecx0afu5" path="res://Random zoom noises/New_Recording_9.ogg" id="11_0rq2j"]
 [ext_resource type="Script" path="res://click.gd" id="11_phiny"]
 [ext_resource type="Script" path="res://facing_player.gd" id="12_sy7jx"]
 [ext_resource type="Script" path="res://drawer_hit.gd" id="13_2j3pw"]
@@ -38,6 +48,19 @@ corner_radius_bottom_left = 5
 corner_detail = 17
 expand_margin_left = 1.0
 expand_margin_right = 1.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ci4um"]
+streams_count = 10
+stream_0/stream = ExtResource("2_tiksp")
+stream_1/stream = ExtResource("3_qcypk")
+stream_2/stream = ExtResource("4_3y4en")
+stream_3/stream = ExtResource("5_jyos2")
+stream_4/stream = ExtResource("6_rkbwu")
+stream_5/stream = ExtResource("7_nfxei")
+stream_6/stream = ExtResource("8_nhyr0")
+stream_7/stream = ExtResource("9_n8lc8")
+stream_8/stream = ExtResource("10_7r4lf")
+stream_9/stream = ExtResource("11_0rq2j")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_prxdj"]
 bg_color = Color(0.0671954, 0.0716912, 0.0933782, 1)
@@ -269,6 +292,9 @@ grow_vertical = 2
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_akgym")
 script = ExtResource("1_0hodx")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Game/GUI/Popups"]
+stream = SubResource("AudioStreamRandomizer_ci4um")
 
 [node name="Mooz" type="Panel" parent="Game/GUI/Popups"]
 layout_mode = 1

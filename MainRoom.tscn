@@ -1,19 +1,29 @@
-[gd_scene load_steps=81 format=3 uid="uid://vfdq1cvm2jxp"]
+[gd_scene load_steps=92 format=3 uid="uid://vfdq1cvm2jxp"]
 
 [ext_resource type="Script" path="res://pop.gd" id="1_2o84w"]
 [ext_resource type="Script" path="res://mooz.gd" id="2_auvs0"]
+[ext_resource type="AudioStream" uid="uid://cvdvahwduqg04" path="res://Random zoom noises/ghost.ogg" id="2_cwdts"]
 [ext_resource type="Texture2D" uid="uid://bg5jnvdbjj57h" path="res://Images/Unmute.png" id="3_74ipc"]
 [ext_resource type="Texture2D" uid="uid://xp8tsbhjc2yh" path="res://Images/mooz logo.png" id="3_iuewn"]
+[ext_resource type="AudioStream" uid="uid://dqych4n6dgs0p" path="res://Random zoom noises/New_Recording.ogg" id="3_w54q5"]
+[ext_resource type="AudioStream" uid="uid://dvruylmkc8mba" path="res://Random zoom noises/New_Recording_2.ogg" id="4_ao8qa"]
 [ext_resource type="Texture2D" uid="uid://cj3lox8c3hpfi" path="res://Images/Stock Photo_1.png" id="4_jsql7"]
 [ext_resource type="Texture2D" uid="uid://dl6fdnv6uelfw" path="res://Images/On Video.png" id="4_xwt4s"]
+[ext_resource type="AudioStream" uid="uid://b7lyofwtffuoo" path="res://Random zoom noises/New_Recording_3.ogg" id="5_al0j3"]
 [ext_resource type="Script" path="res://drawer_game.gd" id="5_ib0sg"]
 [ext_resource type="Script" path="res://call_time.gd" id="5_nl5wc"]
 [ext_resource type="Texture2D" uid="uid://cydcc5f7ot1r7" path="res://Images/Stock Photo_2.png" id="5_ynk61"]
 [ext_resource type="Texture2D" uid="uid://g81q7xyct4se" path="res://Images/Stock Photo_3.png" id="6_1fxbr"]
+[ext_resource type="AudioStream" uid="uid://ck8mgurlagv8f" path="res://Random zoom noises/New_Recording_4.ogg" id="6_hwkh7"]
 [ext_resource type="Script" path="res://clutter.gd" id="7_lfjdn"]
+[ext_resource type="AudioStream" uid="uid://bqdcre3jxxm3g" path="res://Random zoom noises/New_Recording_5.ogg" id="7_w3l5t"]
+[ext_resource type="AudioStream" uid="uid://b5v7wwhlj0x1o" path="res://Random zoom noises/New_Recording_6.ogg" id="8_mb3eq"]
 [ext_resource type="Script" path="res://drawer_collect.gd" id="8_yl1n6"]
+[ext_resource type="AudioStream" uid="uid://dtv6xuj4kdvil" path="res://Random zoom noises/New_Recording_7.ogg" id="9_f8vrn"]
 [ext_resource type="Script" path="res://drop_zone.gd" id="9_xrk4x"]
+[ext_resource type="AudioStream" uid="uid://cjfytvvf7k3d" path="res://Random zoom noises/New_Recording_8.ogg" id="10_fe67e"]
 [ext_resource type="Texture2D" uid="uid://dlw5t28ktlt7n" path="res://Textures/99f3b05e659e42acb1f79e24b8f86809.webp" id="10_ugylm"]
+[ext_resource type="AudioStream" uid="uid://di6rsecx0afu5" path="res://Random zoom noises/New_Recording_9.ogg" id="11_ab4u2"]
 [ext_resource type="Script" path="res://player.gd" id="11_meyn6"]
 [ext_resource type="Texture2D" uid="uid://clfw5h71sgqnt" path="res://Images/Pencil.png" id="11_srg04"]
 [ext_resource type="Texture2D" uid="uid://crnsrs0o7fgh8" path="res://Images/Ruler.png" id="12_3t2n4"]
@@ -53,6 +63,19 @@ corner_radius_bottom_left = 5
 corner_detail = 17
 expand_margin_left = 1.0
 expand_margin_right = 1.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_lynex"]
+streams_count = 10
+stream_0/stream = ExtResource("2_cwdts")
+stream_1/stream = ExtResource("3_w54q5")
+stream_2/stream = ExtResource("4_ao8qa")
+stream_3/stream = ExtResource("5_al0j3")
+stream_4/stream = ExtResource("6_hwkh7")
+stream_5/stream = ExtResource("7_w3l5t")
+stream_6/stream = ExtResource("8_mb3eq")
+stream_7/stream = ExtResource("9_f8vrn")
+stream_8/stream = ExtResource("10_fe67e")
+stream_9/stream = ExtResource("11_ab4u2")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_prxdj"]
 bg_color = Color(0.0671954, 0.0716912, 0.0933782, 1)
@@ -496,6 +519,10 @@ grow_vertical = 2
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_akgym")
 script = ExtResource("1_2o84w")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Game/GUI/Popups"]
+stream = SubResource("AudioStreamRandomizer_lynex")
+volume_db = -1.725
 
 [node name="Mooz" type="Panel" parent="Game/GUI/Popups" node_paths=PackedStringArray("popups")]
 layout_mode = 1
