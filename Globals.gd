@@ -8,9 +8,6 @@ var is_mic_on = true
 var is_participating = false
 var since_participated = 0
 
-var battery_level = 30
-var laptop_is_charging = false
-
 var call_time = 0
 const END_TIME = 30
 
@@ -33,19 +30,11 @@ func _process(delta: float) -> void:
 		if since_participated > 10:
 			participation -= delta
 			if participation < 0:
-				participation = -999
 				get_tree().change_scene_to_file("res://DisconnectScreen.tscn")
 	# call time tracker
 	if time_flowing:
 		call_time += delta
-		if laptop_is_charging:
-			battery_level += delta
-		else:
-			battery_level -= delta
-			if battery_level < 4:
-				participation = -999
-				get_tree().change_scene_to_file("res://DisconnectScreen.tscn")
-		if call_time > END_TIME and participation > 0:
+		if call_time > END_TIME:
 			get_tree().change_scene_to_file("res://WinScreen.tscn")
 	pass
 
