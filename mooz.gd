@@ -14,12 +14,12 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	# Camera update in here maybe?
 	# Probs viewport cmaer, may be that though
-	if inMooz:
-		if Input.is_action_just_pressed("interact"):
-			pressed = true
-		if Input.is_action_just_released("interact") and pressed:
-			pressed = false
-			end()
+	#if inMooz:
+		#if Input.is_action_just_pressed("interact"):
+			#pressed = true
+		#if Input.is_action_just_released("interact") and pressed:
+			#pressed = false
+			#end()
 	pass
 
 func begin():
