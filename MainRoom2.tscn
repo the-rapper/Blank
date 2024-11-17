@@ -27,7 +27,6 @@
 [ext_resource type="PackedScene" uid="uid://cj2uveebx7lyw" path="res://Models/plug.glb" id="19_hp26x"]
 [ext_resource type="Texture2D" uid="uid://fts6h7oxvrcy" path="res://Images/nyan-cat-sparkles_Still Photo.png" id="19_v84gx"]
 [ext_resource type="Texture2D" uid="uid://do8b3knaduioa" path="res://Images/door_closed.png.png" id="20_lvw3c"]
-[ext_resource type="Script" path="res://pet_game.gd" id="20_v64bf"]
 [ext_resource type="Texture2D" uid="uid://hv26iii0evlv" path="res://Images/DadSS.png" id="21_k7skt"]
 [ext_resource type="Script" path="res://dad.gd" id="22_ge2hv"]
 [ext_resource type="Script" path="res://rustle_dad.gd" id="23_2jd6y"]
@@ -193,6 +192,9 @@ size = Vector2(135, 93)
 albedo_texture = ExtResource("12_yqlkm")
 
 [sub_resource type="BoxMesh" id="BoxMesh_kmr7r"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pww8t"]
+size = Vector3(1, 19.8412, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_v5m8l"]
 size = Vector3(0.193485, 0.172363, 0.131126)
@@ -1199,52 +1201,6 @@ grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("11_b1sth")
 
-[node name="Petting" type="Panel" parent="Game/GUI/Popups" node_paths=PackedStringArray("popups", "goal")]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -488.0
-offset_top = -267.5
-offset_right = 488.0
-offset_bottom = 267.5
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 1
-theme_override_styles/panel = SubResource("StyleBoxFlat_7e3fs")
-script = ExtResource("7_6u8ue")
-sprite_options = [ExtResource("8_5wrev"), ExtResource("9_0hciv"), ExtResource("10_0o0t8"), ExtResource("11_bdpdi")]
-clutter_script = ExtResource("9_uof7s")
-popups = NodePath("..")
-goal = NodePath("Pet")
-
-[node name="Pet" type="TextureRect" parent="Game/GUI/Popups/Petting"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -191.0
-offset_top = -106.5
-offset_right = -56.0
-offset_bottom = -14.5
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("19_v84gx")
-expand_mode = 1
-script = ExtResource("20_v64bf")
-
-[node name="Area2D" type="Area2D" parent="Game/GUI/Popups/Petting/Pet" node_paths=PackedStringArray("drawer")]
-script = ExtResource("10_2flms")
-drawer = NodePath("../..")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Game/GUI/Popups/Petting/Pet/Area2D"]
-position = Vector2(67.5, 46)
-shape = SubResource("RectangleShape2D_iu5op")
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Game"]
 environment = SubResource("Environment_robs0")
 
@@ -1257,8 +1213,14 @@ material_override = SubResource("StandardMaterial3D_v8e26")
 mesh = SubResource("BoxMesh_kmr7r")
 skeleton = NodePath("../../../..")
 
+[node name="Area3D" type="Area3D" parent="Game/WorldEnvironment/Room/Floor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Game/WorldEnvironment/Room/Floor/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 0.999952, 0, 0, 0, 0.999944, 0, -9.07973, 0)
+shape = SubResource("BoxShape3D_pww8t")
+
 [node name="Wall Z-" type="MeshInstance3D" parent="Game/WorldEnvironment/Room"]
-transform = Transform3D(7.13531, 0, 0, 0, -2.75677e-09, -5.64831, 0, 0.0630675, -2.46895e-07, -0.0028944, 1.0603, -2.80405)
+transform = Transform3D(0, 0, 0, 0, 0, 0, 0, 0, 0, -0.0028944, 1.0603, -2.80405)
 mesh = SubResource("BoxMesh_kmr7r")
 skeleton = NodePath("../../../..")
 
@@ -1339,11 +1301,10 @@ texture_filter = 2
 texture = ExtResource("24_p7csr")
 
 [node name="Gato" type="Node3D" parent="Game/WorldEnvironment/Facing Player"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.80683, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.87363, 0)
 script = ExtResource("28_6n6ag")
 
 [node name="Sprite3D" type="Sprite3D" parent="Game/WorldEnvironment/Facing Player/Gato"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.636944, -0.116559, 0)
 pixel_size = 0.0005
 texture = ExtResource("19_v84gx")
 
@@ -1352,11 +1313,14 @@ libraries = {
 "": SubResource("AnimationLibrary_07wcv")
 }
 
+[node name="RayCast3D" type="RayCast3D" parent="Game/WorldEnvironment/Facing Player/Gato"]
+collide_with_areas = true
+collide_with_bodies = false
+
 [node name="Area3D" type="Area3D" parent="Game/WorldEnvironment/Facing Player/Gato"]
 script = ExtResource("30_vro80")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Game/WorldEnvironment/Facing Player/Gato/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.584899, -0.079895, -0.019928)
 shape = SubResource("BoxShape3D_2q152")
 
 [node name="plug" parent="Game/WorldEnvironment" instance=ExtResource("19_hp26x")]

@@ -10,6 +10,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func hit():
+func hit() -> void:
+	print("SHITE")
 	get_parent().calm()
 	return 
