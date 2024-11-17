@@ -1,4 +1,4 @@
-[gd_scene load_steps=92 format=3 uid="uid://vfdq1cvm2jxp"]
+[gd_scene load_steps=93 format=3 uid="uid://vfdq1cvm2jxp"]
 
 [ext_resource type="Script" path="res://pop.gd" id="1_2o84w"]
 [ext_resource type="Script" path="res://mooz.gd" id="2_auvs0"]
@@ -37,6 +37,7 @@
 [ext_resource type="PackedScene" uid="uid://cj2uveebx7lyw" path="res://Models/plug.glb" id="17_58bbx"]
 [ext_resource type="Texture2D" uid="uid://do8b3knaduioa" path="res://Images/door_closed.png.png" id="18_5e4nh"]
 [ext_resource type="Texture2D" uid="uid://hv26iii0evlv" path="res://Images/DadSS.png" id="19_jamtf"]
+[ext_resource type="Script" path="res://bar.gd" id="20_2kd5v"]
 [ext_resource type="Script" path="res://dad.gd" id="20_4vjfi"]
 [ext_resource type="Texture2D" uid="uid://dnv126b4qn0r0" path="res://Images/Cat_Poster_2.png" id="21_d4pfa"]
 [ext_resource type="Script" path="res://game_logic_container.gd" id="22_4fkiu"]
@@ -1178,6 +1179,7 @@ offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_we8g2")
+script = ExtResource("20_2kd5v")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Game/GUI/Popups/Connection/Panel"]
 layout_mode = 0
