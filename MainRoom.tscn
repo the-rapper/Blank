@@ -1,15 +1,14 @@
-[gd_scene load_steps=69 format=3 uid="uid://b3w0u2fyyrpnc"]
+[gd_scene load_steps=67 format=3 uid="uid://b3w0u2fyyrpnc"]
 
 [ext_resource type="Script" path="res://pop.gd" id="1_2o84w"]
 [ext_resource type="Script" path="res://mooz.gd" id="2_auvs0"]
 [ext_resource type="Texture2D" uid="uid://bg5jnvdbjj57h" path="res://Images/Unmute.png" id="3_74ipc"]
+[ext_resource type="Texture2D" uid="uid://xp8tsbhjc2yh" path="res://Images/mooz logo.png" id="3_iuewn"]
 [ext_resource type="Texture2D" uid="uid://dl6fdnv6uelfw" path="res://Images/On Video.png" id="4_xwt4s"]
 [ext_resource type="Script" path="res://drawer_game.gd" id="5_ib0sg"]
 [ext_resource type="Script" path="res://call_time.gd" id="5_nl5wc"]
 [ext_resource type="Texture2D" uid="uid://cjq6luovhblhy" path="res://icon.svg" id="6_1egyw"]
-[ext_resource type="Texture2D" uid="uid://hve0bqb6w3l" path="res://Images/minimize button.png" id="6_f0ryp"]
 [ext_resource type="Script" path="res://clutter.gd" id="7_lfjdn"]
-[ext_resource type="Script" path="res://MinBut.gd" id="7_u4cs0"]
 [ext_resource type="Script" path="res://drawer_collect.gd" id="8_yl1n6"]
 [ext_resource type="Script" path="res://drop_zone.gd" id="9_xrk4x"]
 [ext_resource type="Texture2D" uid="uid://dlw5t28ktlt7n" path="res://Textures/99f3b05e659e42acb1f79e24b8f86809.webp" id="10_ugylm"]
@@ -46,9 +45,6 @@ expand_margin_right = 1.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_prxdj"]
 bg_color = Color(0.0671954, 0.0716912, 0.0933782, 1)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5p5sj"]
-size = Vector2(1226, 1249)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rmp8h"]
 bg_color = Color(1, 1, 1, 0.980392)
@@ -271,10 +267,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -748.5
-offset_top = -411.5
-offset_right = 748.5
-offset_bottom = 411.5
+offset_left = -942.0
+offset_top = -458.0
+offset_right = 555.0
+offset_bottom = 365.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
@@ -301,19 +297,12 @@ popups = NodePath("..")
 
 [node name="TextureRect" type="TextureRect" parent="Game/GUI/Popups/Mooz"]
 layout_mode = 0
-offset_left = 700.0
-offset_top = 4.5
-offset_right = 766.0
-offset_bottom = 52.5
-texture = ExtResource("6_f0ryp")
-
-[node name="Area2D" type="Area2D" parent="Game/GUI/Popups/Mooz/TextureRect" node_paths=PackedStringArray("mooz")]
-script = ExtResource("7_u4cs0")
-mooz = NodePath("../..")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Game/GUI/Popups/Mooz/TextureRect/Area2D"]
-position = Vector2(-547, 93.5)
-shape = SubResource("RectangleShape2D_5p5sj")
+offset_left = 301.5
+offset_top = -70.0
+offset_right = 462.5
+offset_bottom = 92.0
+texture = ExtResource("3_iuewn")
+expand_mode = 1
 
 [node name="RightBar" type="Panel" parent="Game/GUI/Popups/Mooz"]
 clip_contents = true
@@ -1078,6 +1067,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14063, -0.0601349, -0.0359
 shape = SubResource("BoxShape3D_v5m8l")
 
 [node name="SubViewport" type="SubViewport" parent="Game/WorldEnvironment/Facing Player/Desk/MeshInstance3D"]
+size = Vector2i(384, 256)
 
 [node name="Camera3D" type="Camera3D" parent="Game/WorldEnvironment/Facing Player/Desk/MeshInstance3D/SubViewport"]
 transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -1.22829, -1.64573, -1.20544)
