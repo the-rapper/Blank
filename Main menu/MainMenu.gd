@@ -13,8 +13,7 @@ func _ready():
 	
 	# Get button references
 	var start_button = $MarginContainer/MenuItems/StartButton
-	var settings_button = $MarginContainer/MenuItems/SettingsButton
-	var credits_button = $MarginContainer/MenuItems/CreditsButton
+	var settings_button = $MarginContainer/MenuItems/SettingsButton	
 	var quit_button = $MarginContainer/MenuItems/QuitButton
 	
 	# Debug prints

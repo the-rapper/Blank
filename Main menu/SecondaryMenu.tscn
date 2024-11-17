@@ -28,7 +28,7 @@ layout_mode = 2
 [node name="Question1" type="VBoxContainer" parent="MarginContainer/VBoxContainer/QuestionContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/QuestionContainer/Question1"]
+[node name="pets" type="Label" parent="MarginContainer/VBoxContainer/QuestionContainer/Question1"]
 layout_mode = 2
 text = "Do you have any pets?
 "
@@ -36,44 +36,83 @@ text = "Do you have any pets?
 [node name="OptionButtons" type="HBoxContainer" parent="MarginContainer/VBoxContainer/QuestionContainer/Question1"]
 layout_mode = 2
 
-[node name="CheckBox" type="CheckBox" parent="MarginContainer/VBoxContainer/QuestionContainer/Question1/OptionButtons"]
+[node name="Dog" type="CheckBox" parent="MarginContainer/VBoxContainer/QuestionContainer/Question1/OptionButtons"]
 layout_mode = 2
+text = "Dog"
 
-[node name="CheckBox2" type="CheckBox" parent="MarginContainer/VBoxContainer/QuestionContainer/Question1/OptionButtons"]
+[node name="Cat" type="CheckBox" parent="MarginContainer/VBoxContainer/QuestionContainer/Question1/OptionButtons"]
 layout_mode = 2
+text = "Cat"
 
-[node name="CheckBox3" type="CheckBox" parent="MarginContainer/VBoxContainer/QuestionContainer/Question1/OptionButtons"]
+[node name="Both" type="CheckBox" parent="MarginContainer/VBoxContainer/QuestionContainer/Question1/OptionButtons"]
 layout_mode = 2
+text = "Both"
 
-[node name="CheckBox4" type="CheckBox" parent="MarginContainer/VBoxContainer/QuestionContainer/Question1/OptionButtons"]
+[node name="None" type="CheckBox" parent="MarginContainer/VBoxContainer/QuestionContainer/Question1/OptionButtons"]
 layout_mode = 2
+text = "None"
 
 [node name="Question2" type="VBoxContainer" parent="MarginContainer/VBoxContainer/QuestionContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/QuestionContainer/Question2"]
+[node name="Who do you live with?" type="Label" parent="MarginContainer/VBoxContainer/QuestionContainer/Question2"]
 layout_mode = 2
+text = "Who do you live with?"
 
 [node name="OptionButtons" type="HBoxContainer" parent="MarginContainer/VBoxContainer/QuestionContainer/Question2"]
 layout_mode = 2
 
+[node name="Family" type="CheckBox" parent="MarginContainer/VBoxContainer/QuestionContainer/Question2/OptionButtons"]
+layout_mode = 2
+text = "Family"
+
+[node name="Roomates" type="CheckBox" parent="MarginContainer/VBoxContainer/QuestionContainer/Question2/OptionButtons"]
+layout_mode = 2
+text = "Roomates"
+
+[node name="Alone" type="CheckBox" parent="MarginContainer/VBoxContainer/QuestionContainer/Question2/OptionButtons"]
+layout_mode = 2
+text = "Alone"
+
 [node name="Question3" type="VBoxContainer" parent="MarginContainer/VBoxContainer/QuestionContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/QuestionContainer/Question3"]
+[node name="Afraid of dark?" type="Label" parent="MarginContainer/VBoxContainer/QuestionContainer/Question3"]
 layout_mode = 2
+text = "Are you afraid of the dark?"
 
 [node name="OptionButtons" type="HBoxContainer" parent="MarginContainer/VBoxContainer/QuestionContainer/Question3"]
 layout_mode = 2
 
+[node name="Yes" type="CheckBox" parent="MarginContainer/VBoxContainer/QuestionContainer/Question3/OptionButtons"]
+layout_mode = 2
+text = "Yes"
+
+[node name="No" type="CheckBox" parent="MarginContainer/VBoxContainer/QuestionContainer/Question3/OptionButtons"]
+layout_mode = 2
+text = "No"
+
 [node name="Question4" type="VBoxContainer" parent="MarginContainer/VBoxContainer/QuestionContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/QuestionContainer/Question4"]
+[node name="experienced with vcs?" type="Label" parent="MarginContainer/VBoxContainer/QuestionContainer/Question4"]
 layout_mode = 2
+text = "How experienced are you with video calls"
 
 [node name="OptionButtons" type="HBoxContainer" parent="MarginContainer/VBoxContainer/QuestionContainer/Question4"]
 layout_mode = 2
+
+[node name="Beginner" type="CheckBox" parent="MarginContainer/VBoxContainer/QuestionContainer/Question4/OptionButtons"]
+layout_mode = 2
+text = "I've done it once or twice"
+
+[node name="Intermediate" type="CheckBox" parent="MarginContainer/VBoxContainer/QuestionContainer/Question4/OptionButtons"]
+layout_mode = 2
+text = "I do it often"
+
+[node name="Expert" type="CheckBox" parent="MarginContainer/VBoxContainer/QuestionContainer/Question4/OptionButtons"]
+layout_mode = 2
+text = "I do it all the time"
 
 [node name="Question5" type="VBoxContainer" parent="MarginContainer/VBoxContainer/QuestionContainer"]
 layout_mode = 2
@@ -95,5 +134,13 @@ layout_mode = 2
 
 [node name="ButtonContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+
+[node name="Start Game" type="Button" parent="MarginContainer/VBoxContainer/ButtonContainer"]
+layout_mode = 2
+text = "Start Game"
+
+[node name="Randomize" type="Button" parent="MarginContainer/VBoxContainer/ButtonContainer"]
+layout_mode = 2
+text = "Randomize Answers [not recommended for first time]"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
