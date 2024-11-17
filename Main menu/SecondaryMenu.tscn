@@ -1,5 +1,99 @@
 [gd_scene format=3 uid="uid://dbolgrtldiwry"]
 
-[node name="SecondaryMenu" type="Control"]
+[node name="SurveyMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Introtext" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Before you play, please answer a few questions..."
+horizontal_alignment = 1
+
+[node name="QuestionContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Question1" type="VBoxContainer" parent="MarginContainer/VBoxContainer/QuestionContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/QuestionContainer/Question1"]
+layout_mode = 2
+text = "Do you have any pets?
+"
+
+[node name="OptionButtons" type="HBoxContainer" parent="MarginContainer/VBoxContainer/QuestionContainer/Question1"]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="MarginContainer/VBoxContainer/QuestionContainer/Question1/OptionButtons"]
+layout_mode = 2
+
+[node name="CheckBox2" type="CheckBox" parent="MarginContainer/VBoxContainer/QuestionContainer/Question1/OptionButtons"]
+layout_mode = 2
+
+[node name="CheckBox3" type="CheckBox" parent="MarginContainer/VBoxContainer/QuestionContainer/Question1/OptionButtons"]
+layout_mode = 2
+
+[node name="CheckBox4" type="CheckBox" parent="MarginContainer/VBoxContainer/QuestionContainer/Question1/OptionButtons"]
+layout_mode = 2
+
+[node name="Question2" type="VBoxContainer" parent="MarginContainer/VBoxContainer/QuestionContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/QuestionContainer/Question2"]
+layout_mode = 2
+
+[node name="OptionButtons" type="HBoxContainer" parent="MarginContainer/VBoxContainer/QuestionContainer/Question2"]
+layout_mode = 2
+
+[node name="Question3" type="VBoxContainer" parent="MarginContainer/VBoxContainer/QuestionContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/QuestionContainer/Question3"]
+layout_mode = 2
+
+[node name="OptionButtons" type="HBoxContainer" parent="MarginContainer/VBoxContainer/QuestionContainer/Question3"]
+layout_mode = 2
+
+[node name="Question4" type="VBoxContainer" parent="MarginContainer/VBoxContainer/QuestionContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/QuestionContainer/Question4"]
+layout_mode = 2
+
+[node name="OptionButtons" type="HBoxContainer" parent="MarginContainer/VBoxContainer/QuestionContainer/Question4"]
+layout_mode = 2
+
+[node name="Question5" type="VBoxContainer" parent="MarginContainer/VBoxContainer/QuestionContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/QuestionContainer/Question5"]
+layout_mode = 2
+
+[node name="OptionButtons" type="HBoxContainer" parent="MarginContainer/VBoxContainer/QuestionContainer/Question5"]
+layout_mode = 2
+
+[node name="Question6" type="VBoxContainer" parent="MarginContainer/VBoxContainer/QuestionContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/QuestionContainer/Question6"]
+layout_mode = 2
+
+[node name="OptionButtons" type="HBoxContainer" parent="MarginContainer/VBoxContainer/QuestionContainer/Question6"]
+layout_mode = 2
+
+[node name="ButtonContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
