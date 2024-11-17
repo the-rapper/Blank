@@ -20,6 +20,13 @@ func _process(delta: float) -> void:
 		#if Input.is_action_just_released("interact") and pressed:
 			#pressed = false
 			#end()
+	$BatteryLevel.text = "Battery: %2.0f%%" % Globals.battery_level
+	if inMooz:
+		if Input.is_action_just_pressed("interact"):
+			pressed = true
+		if Input.is_action_just_released("interact") and pressed:
+			pressed = false
+			end()
 	pass
 
 func begin():

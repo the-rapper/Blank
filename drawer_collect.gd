@@ -12,7 +12,8 @@ func _mouse_enter() -> void:
 	hover = true
 func _mouse_exit() -> void:
 	hover = false
-func end(): 
+func end():
+	Globals.laptop_is_charging = true
 	drawer.end()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
