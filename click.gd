@@ -8,6 +8,13 @@ func _ready() -> void:
 var pressed = false
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	var temp = cast_mouse_ray()
+	if temp.has("collider"):
+		Input.set_default_cursor_shape(Input.CURSOR_POINTING_HAND)
+	else:
+		Input.set_default_cursor_shape(Input.CURSOR_ARROW)
+
+	
 	if Globals.can_interact:
 		if Input.is_action_just_pressed("interact"):
 			pressed = true
