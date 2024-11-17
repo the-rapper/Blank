@@ -42,7 +42,7 @@ func _ready():
 		quit_button.pressed.connect(_on_quit_pressed)
 		quit_button.mouse_entered.connect(func(): _on_button_hover(quit_button))
 		quit_button.mouse_exited.connect(func(): _on_button_normal(quit_button))
-
+	Globals.time_flowing = false
 	
 func _on_button_hover(button: Button):
 	print("Button hover")
