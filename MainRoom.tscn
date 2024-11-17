@@ -1,5 +1,4 @@
 [gd_scene load_steps=65 format=3 uid="uid://vfdq1cvm2jxp"]
-[gd_scene load_steps=59 format=3 uid="uid://vn45hbpedsc7"]
 
 [ext_resource type="Script" path="res://pop.gd" id="1_2o84w"]
 [ext_resource type="Script" path="res://mooz.gd" id="2_auvs0"]
@@ -13,7 +12,6 @@
 [ext_resource type="Script" path="res://drawer_collect.gd" id="8_yl1n6"]
 [ext_resource type="Script" path="res://drop_zone.gd" id="9_xrk4x"]
 [ext_resource type="Texture2D" uid="uid://dlw5t28ktlt7n" path="res://Textures/99f3b05e659e42acb1f79e24b8f86809.webp" id="10_ugylm"]
-[ext_resource type="PackedScene" uid="uid://b4vjk18dw8r2x" path="res://WinScreen.tscn" id="11_8wmt0"]
 [ext_resource type="Script" path="res://player.gd" id="11_meyn6"]
 [ext_resource type="Script" path="res://click.gd" id="12_e334y"]
 [ext_resource type="Script" path="res://facing_player.gd" id="13_vwm3k"]
@@ -975,9 +973,6 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("9_xrk4x")
-
-[node name="WinScreen" parent="Game/GUI" instance=ExtResource("11_8wmt0")]
-visible = false
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Game"]
 environment = SubResource("Environment_robs0")
